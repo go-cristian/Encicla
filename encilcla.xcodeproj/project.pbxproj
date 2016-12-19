@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20595FBB47A473AA04DB13B3 /* Pods_encilcla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */; };
+		24D2E37E1E074ED500C7B8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */; };
+		24D2E3801E074ED500C7B8AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E37F1E074ED500C7B8AF /* ViewController.swift */; };
+		24D2E3831E074ED500C7B8AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3811E074ED500C7B8AF /* Main.storyboard */; };
+		24D2E3851E074ED500C7B8AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3841E074ED500C7B8AF /* Assets.xcassets */; };
+		24D2E3881E074ED500C7B8AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */; };
+		24D2E3931E074ED500C7B8AF /* encilclaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E3921E074ED500C7B8AF /* encilclaTests.swift */; };
+		24D2E39E1E074ED500C7B8AF /* encilclaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */; };
+		BE11164C5AB66AED68C765CB /* Pods_encilclaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */; };
+		C5A5AEA4FBEA7228E377FF52 /* Pods_encilclaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24D2E38F1E074ED500C7B8AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24D2E3721E074ED500C7B8AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24D2E3791E074ED500C7B8AF;
+			remoteInfo = encilcla;
+		};
+		24D2E39A1E074ED500C7B8AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24D2E3721E074ED500C7B8AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24D2E3791E074ED500C7B8AF;
+			remoteInfo = encilcla;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		070AFA258282054E91611B39 /* Pods-encilclaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaTests/Pods-encilclaTests.release.xcconfig"; sourceTree = "<group>"; };
+		0B55233E27A7D8A615A289A1 /* Pods-encilclaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaTests/Pods-encilclaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilclaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D2E37A1E074ED500C7B8AF /* encilcla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = encilcla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		24D2E37F1E074ED500C7B8AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24D2E3821E074ED500C7B8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24D2E3841E074ED500C7B8AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24D2E3871E074ED500C7B8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		24D2E3891E074ED500C7B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24D2E38E1E074ED500C7B8AF /* encilclaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = encilclaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D2E3921E074ED500C7B8AF /* encilclaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encilclaTests.swift; sourceTree = "<group>"; };
+		24D2E3941E074ED500C7B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24D2E3991E074ED500C7B8AF /* encilclaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = encilclaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encilclaUITests.swift; sourceTree = "<group>"; };
+		24D2E39F1E074ED500C7B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilcla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9F3031FFA0D4785FB2C644 /* Pods-encilclaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8D8786E8CBCFA9B3296947B8 /* Pods-encilcla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilcla.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilcla/Pods-encilcla.release.xcconfig"; sourceTree = "<group>"; };
+		909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilclaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F36A6A83831CFAA3AB5B80 /* Pods-encilcla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilcla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilcla/Pods-encilcla.debug.xcconfig"; sourceTree = "<group>"; };
+		C1AA064010660C17CFEACF25 /* Pods-encilclaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24D2E3771E074ED500C7B8AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20595FBB47A473AA04DB13B3 /* Pods_encilcla.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24D2E38B1E074ED500C7B8AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE11164C5AB66AED68C765CB /* Pods_encilclaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24D2E3961E074ED500C7B8AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A5AEA4FBEA7228E377FF52 /* Pods_encilclaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0769667B039511974C853503 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1F36A6A83831CFAA3AB5B80 /* Pods-encilcla.debug.xcconfig */,
+				8D8786E8CBCFA9B3296947B8 /* Pods-encilcla.release.xcconfig */,
+				0B55233E27A7D8A615A289A1 /* Pods-encilclaTests.debug.xcconfig */,
+				070AFA258282054E91611B39 /* Pods-encilclaTests.release.xcconfig */,
+				C1AA064010660C17CFEACF25 /* Pods-encilclaUITests.debug.xcconfig */,
+				8C9F3031FFA0D4785FB2C644 /* Pods-encilclaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		19E782960F5978AC4F9E0551 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */,
+				909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */,
+				1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24D2E3711E074ED500C7B8AF = {
+			isa = PBXGroup;
+			children = (
+				24D2E37C1E074ED500C7B8AF /* encilcla */,
+				24D2E3911E074ED500C7B8AF /* encilclaTests */,
+				24D2E39C1E074ED500C7B8AF /* encilclaUITests */,
+				24D2E37B1E074ED500C7B8AF /* Products */,
+				0769667B039511974C853503 /* Pods */,
+				19E782960F5978AC4F9E0551 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		24D2E37B1E074ED500C7B8AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24D2E37A1E074ED500C7B8AF /* encilcla.app */,
+				24D2E38E1E074ED500C7B8AF /* encilclaTests.xctest */,
+				24D2E3991E074ED500C7B8AF /* encilclaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24D2E37C1E074ED500C7B8AF /* encilcla */ = {
+			isa = PBXGroup;
+			children = (
+				24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */,
+				24D2E37F1E074ED500C7B8AF /* ViewController.swift */,
+				24D2E3811E074ED500C7B8AF /* Main.storyboard */,
+				24D2E3841E074ED500C7B8AF /* Assets.xcassets */,
+				24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */,
+				24D2E3891E074ED500C7B8AF /* Info.plist */,
+			);
+			path = encilcla;
+			sourceTree = "<group>";
+		};
+		24D2E3911E074ED500C7B8AF /* encilclaTests */ = {
+			isa = PBXGroup;
+			children = (
+				24D2E3921E074ED500C7B8AF /* encilclaTests.swift */,
+				24D2E3941E074ED500C7B8AF /* Info.plist */,
+			);
+			path = encilclaTests;
+			sourceTree = "<group>";
+		};
+		24D2E39C1E074ED500C7B8AF /* encilclaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */,
+				24D2E39F1E074ED500C7B8AF /* Info.plist */,
+			);
+			path = encilclaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24D2E3791E074ED500C7B8AF /* encilcla */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24D2E3A21E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "encilcla" */;
+			buildPhases = (
+				3A91454D53BD46DDAFD2D59E /* [CP] Check Pods Manifest.lock */,
+				24D2E3761E074ED500C7B8AF /* Sources */,
+				24D2E3771E074ED500C7B8AF /* Frameworks */,
+				24D2E3781E074ED500C7B8AF /* Resources */,
+				EC0F00A797B75A84A85E54FC /* [CP] Embed Pods Frameworks */,
+				2C7A01061298A02E42BB9F47 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = encilcla;
+			productName = encilcla;
+			productReference = 24D2E37A1E074ED500C7B8AF /* encilcla.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24D2E38D1E074ED500C7B8AF /* encilclaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24D2E3A51E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "encilclaTests" */;
+			buildPhases = (
+				66BBDBC46181BBF1C510FDB3 /* [CP] Check Pods Manifest.lock */,
+				24D2E38A1E074ED500C7B8AF /* Sources */,
+				24D2E38B1E074ED500C7B8AF /* Frameworks */,
+				24D2E38C1E074ED500C7B8AF /* Resources */,
+				6AD3CB9F3AE72306E4762188 /* [CP] Embed Pods Frameworks */,
+				9E826F097EFCF363CB9925C5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24D2E3901E074ED500C7B8AF /* PBXTargetDependency */,
+			);
+			name = encilclaTests;
+			productName = encilclaTests;
+			productReference = 24D2E38E1E074ED500C7B8AF /* encilclaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		24D2E3981E074ED500C7B8AF /* encilclaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24D2E3A81E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "encilclaUITests" */;
+			buildPhases = (
+				0C0D8AD91688C8A613577643 /* [CP] Check Pods Manifest.lock */,
+				24D2E3951E074ED500C7B8AF /* Sources */,
+				24D2E3961E074ED500C7B8AF /* Frameworks */,
+				24D2E3971E074ED500C7B8AF /* Resources */,
+				210E82E63D3B6927164B460E /* [CP] Embed Pods Frameworks */,
+				2FE6ECA9ECD44376B24C666F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24D2E39B1E074ED500C7B8AF /* PBXTargetDependency */,
+			);
+			name = encilclaUITests;
+			productName = encilclaUITests;
+			productReference = 24D2E3991E074ED500C7B8AF /* encilclaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24D2E3721E074ED500C7B8AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Iyubinest;
+				TargetAttributes = {
+					24D2E3791E074ED500C7B8AF = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					24D2E38D1E074ED500C7B8AF = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 24D2E3791E074ED500C7B8AF;
+					};
+					24D2E3981E074ED500C7B8AF = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 24D2E3791E074ED500C7B8AF;
+					};
+				};
+			};
+			buildConfigurationList = 24D2E3751E074ED500C7B8AF /* Build configuration list for PBXProject "encilcla" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24D2E3711E074ED500C7B8AF;
+			productRefGroup = 24D2E37B1E074ED500C7B8AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24D2E3791E074ED500C7B8AF /* encilcla */,
+				24D2E38D1E074ED500C7B8AF /* encilclaTests */,
+				24D2E3981E074ED500C7B8AF /* encilclaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24D2E3781E074ED500C7B8AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D2E3881E074ED500C7B8AF /* LaunchScreen.storyboard in Resources */,
+				24D2E3851E074ED500C7B8AF /* Assets.xcassets in Resources */,
+				24D2E3831E074ED500C7B8AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24D2E38C1E074ED500C7B8AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24D2E3971E074ED500C7B8AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C0D8AD91688C8A613577643 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		210E82E63D3B6927164B460E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C7A01061298A02E42BB9F47 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-encilcla/Pods-encilcla-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FE6ECA9ECD44376B24C666F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A91454D53BD46DDAFD2D59E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66BBDBC46181BBF1C510FDB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AD3CB9F3AE72306E4762188 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-encilclaTests/Pods-encilclaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E826F097EFCF363CB9925C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-encilclaTests/Pods-encilclaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC0F00A797B75A84A85E54FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-encilcla/Pods-encilcla-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24D2E3761E074ED500C7B8AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D2E3801E074ED500C7B8AF /* ViewController.swift in Sources */,
+				24D2E37E1E074ED500C7B8AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24D2E38A1E074ED500C7B8AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D2E3931E074ED500C7B8AF /* encilclaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24D2E3951E074ED500C7B8AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D2E39E1E074ED500C7B8AF /* encilclaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24D2E3901E074ED500C7B8AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24D2E3791E074ED500C7B8AF /* encilcla */;
+			targetProxy = 24D2E38F1E074ED500C7B8AF /* PBXContainerItemProxy */;
+		};
+		24D2E39B1E074ED500C7B8AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24D2E3791E074ED500C7B8AF /* encilcla */;
+			targetProxy = 24D2E39A1E074ED500C7B8AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24D2E3811E074ED500C7B8AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24D2E3821E074ED500C7B8AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24D2E3871E074ED500C7B8AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24D2E3A01E074ED500C7B8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		24D2E3A11E074ED500C7B8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24D2E3A31E074ED500C7B8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1F36A6A83831CFAA3AB5B80 /* Pods-encilcla.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = encilcla/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilcla;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		24D2E3A41E074ED500C7B8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D8786E8CBCFA9B3296947B8 /* Pods-encilcla.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = encilcla/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilcla;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		24D2E3A61E074ED500C7B8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B55233E27A7D8A615A289A1 /* Pods-encilclaTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = encilclaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilclaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/encilcla.app/encilcla";
+			};
+			name = Debug;
+		};
+		24D2E3A71E074ED500C7B8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070AFA258282054E91611B39 /* Pods-encilclaTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = encilclaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilclaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/encilcla.app/encilcla";
+			};
+			name = Release;
+		};
+		24D2E3A91E074ED500C7B8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1AA064010660C17CFEACF25 /* Pods-encilclaUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = encilclaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilclaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = encilcla;
+			};
+			name = Debug;
+		};
+		24D2E3AA1E074ED500C7B8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C9F3031FFA0D4785FB2C644 /* Pods-encilclaUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = encilclaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilclaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = encilcla;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24D2E3751E074ED500C7B8AF /* Build configuration list for PBXProject "encilcla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D2E3A01E074ED500C7B8AF /* Debug */,
+				24D2E3A11E074ED500C7B8AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24D2E3A21E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "encilcla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D2E3A31E074ED500C7B8AF /* Debug */,
+				24D2E3A41E074ED500C7B8AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24D2E3A51E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "encilclaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D2E3A61E074ED500C7B8AF /* Debug */,
+				24D2E3A71E074ED500C7B8AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24D2E3A81E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "encilclaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D2E3A91E074ED500C7B8AF /* Debug */,
+				24D2E3AA1E074ED500C7B8AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24D2E3721E074ED500C7B8AF /* Project object */;
+}
