@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ObjectMapper
+import AlamofireObjectMapper
 import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource {
@@ -24,6 +26,11 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     @IBAction func findBikeAction(_ sender: AnyObject) {
+        let URL = "http://www.encicla.gov.co/status/"
+        Alamofire.request(URL).responseObject{
+                (response: DataResponse<BikeServerResponse>) in
+                    let bikeResponse = response.result.value
+            }
         
     }
     
@@ -43,4 +50,43 @@ struct Station{
     var capacity:Int?
     var current:Int?
 }
+
+class BikeServerResponse: Mappable{
+    var stations :[BikeResponseStation]?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        stations <- map["stations"]
+    }
+}
+
+class BikeResponseStation:Mappable{
+    var items: [BikeResponseItem]?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        items <- map["items"]
+    }
+}
+
+class BikeResponseItem:Mappable{
+    var lat: String?
+    var lon: String?
+    var name: String?
+    var capacity: Int?
+    var bikes: Int?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        lat <- map["lat"]
+        lon <- map["lon"]
+        name <- map["name"]
+        capacity <- map["capacity"]
+        bikes <- map["bikes"]
+    }
+}
+
 
