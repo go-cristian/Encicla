@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource {
 
@@ -22,16 +23,17 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func findBikeAction(sender: AnyObject) {
+    @IBAction func findBikeAction(_ sender: AnyObject) {
+        
     }
     
-    func tableView(tableView: UITableView,
+    func tableView(_ tableView: UITableView,
                      numberOfRowsInSection section: Int) -> Int {
         return bikeResults?.count ?? 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCellWithIdentifier("StationCell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: "StationCell", for: indexPath)
     }
     
 }
