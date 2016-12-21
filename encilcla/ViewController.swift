@@ -15,10 +15,11 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var bikeTableView: UITableView!
     
-    var bikeResults:[Station]?
+    var bikeResults:[BikeResponseItem]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bikeResults = []
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,9 +30,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         let URL = "http://www.encicla.gov.co/status/"
         Alamofire.request(URL).responseObject{
                 (response: DataResponse<BikeServerResponse>) in
-                    let bikeResponse = response.result.value
+            response.result.value.map{
+                $0.stations!.map{
+                    $0.items!.map{
+                        self.bikeResults?.append($0)
+                    }
+                }
             }
-        
+            self.bikeTableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView,
@@ -40,7 +47,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "StationCell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: StationViewCell.REHUSE_NAME, for: indexPath) as! StationViewCell
+        cell.station = bikeResults?[indexPath.row]
+        return cell
     }
     
 }

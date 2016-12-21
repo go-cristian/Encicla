@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,27 +19,53 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-qA-qJN">
-                                <rect key="frame" x="20" y="20" width="560" height="526"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="16" y="20" width="343" height="593"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationViewCell" id="KIP-i7-ae5" customClass="StationViewCell" customModule="encilcla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KIP-i7-ae5" id="zcs-iE-Kg3">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXl-NF-07b">
+                                                    <rect key="frame" x="0.0" y="11.5" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="SXl-NF-07b" secondAttribute="trailing" id="1Gs-Ia-NXd"/>
+                                                <constraint firstItem="SXl-NF-07b" firstAttribute="leading" secondItem="zcs-iE-Kg3" secondAttribute="leading" id="Man-Qo-v4f"/>
+                                                <constraint firstItem="SXl-NF-07b" firstAttribute="centerY" secondItem="zcs-iE-Kg3" secondAttribute="centerY" id="f37-ud-Zbj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameView" destination="SXl-NF-07b" id="2yJ-K5-tfh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Y7s-zS-Xhd"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3xc-RQ-uc1"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RX-0t-qWw">
-                                <rect key="frame" x="20" y="556" width="560" height="34"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="623" width="335" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Find"/>
                                 <connections>
                                     <action selector="findBikeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQJ-Vf-v3h"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Tss-qA-qJN" secondAttribute="trailing" id="9w0-ZX-BdC"/>
                             <constraint firstItem="Tss-qA-qJN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FBI-od-hXz"/>
@@ -52,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="211"/>
+            <point key="canvasLocation" x="213.59999999999999" y="210.94452773613196"/>
         </scene>
     </scenes>
 </document>

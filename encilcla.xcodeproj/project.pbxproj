@@ -15,6 +15,7 @@
 		24D2E3881E074ED500C7B8AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */; };
 		24D2E3931E074ED500C7B8AF /* encilclaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E3921E074ED500C7B8AF /* encilclaTests.swift */; };
 		24D2E39E1E074ED500C7B8AF /* encilclaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */; };
+		24DD8E9F1E0A47F90023520A /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD8E9E1E0A47F90023520A /* StationViewCell.swift */; };
 		BE11164C5AB66AED68C765CB /* Pods_encilclaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */; };
 		C5A5AEA4FBEA7228E377FF52 /* Pods_encilclaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		24D2E3991E074ED500C7B8AF /* encilclaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = encilclaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encilclaUITests.swift; sourceTree = "<group>"; };
 		24D2E39F1E074ED500C7B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24DD8E9E1E0A47F90023520A /* StationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
 		3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilcla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9F3031FFA0D4785FB2C644 /* Pods-encilclaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8D8786E8CBCFA9B3296947B8 /* Pods-encilcla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilcla.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilcla/Pods-encilcla.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				24D2E3841E074ED500C7B8AF /* Assets.xcassets */,
 				24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */,
 				24D2E3891E074ED500C7B8AF /* Info.plist */,
+				24DD8E9E1E0A47F90023520A /* StationViewCell.swift */,
 			);
 			path = encilcla;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DD8E9F1E0A47F90023520A /* StationViewCell.swift in Sources */,
 				24D2E3801E074ED500C7B8AF /* ViewController.swift in Sources */,
 				24D2E37E1E074ED500C7B8AF /* AppDelegate.swift in Sources */,
 			);
