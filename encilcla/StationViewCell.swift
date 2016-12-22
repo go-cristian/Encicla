@@ -13,10 +13,12 @@ class StationViewCell: UITableViewCell {
     static let REHUSE_NAME = "StationViewCell"
     
     @IBOutlet var nameView: UILabel!
+    @IBOutlet var bikesView: UILabel!
     
     var station:BikeResponseItem? {
         didSet {
             nameView.text = station?.name
+            if let bikes = station?.bikes{bikesView.text = String(describing: bikes)}
         }
     }
     
