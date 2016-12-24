@@ -3,18 +3,32 @@ PODS:
   - AlamofireObjectMapper (4.0.1):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
   - ObjectMapper (2.2.2)
+  - RxCocoa (3.0.1):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
+  - GoogleMaps
   - ObjectMapper
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+  RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
+  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
 
-PODFILE CHECKSUM: 05613f6c742144863745714a600eb03499aee491
+PODFILE CHECKSUM: 32892b97358eb9a394c599f518d3aea2eaf5cd9a
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.1.1

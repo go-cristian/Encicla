@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		20595FBB47A473AA04DB13B3 /* Pods_encilcla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */; };
 		24D2E37E1E074ED500C7B8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */; };
-		24D2E3801E074ED500C7B8AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E37F1E074ED500C7B8AF /* ViewController.swift */; };
 		24D2E3831E074ED500C7B8AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3811E074ED500C7B8AF /* Main.storyboard */; };
 		24D2E3851E074ED500C7B8AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3841E074ED500C7B8AF /* Assets.xcassets */; };
 		24D2E3881E074ED500C7B8AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */; };
 		24D2E3931E074ED500C7B8AF /* encilclaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E3921E074ED500C7B8AF /* encilclaTests.swift */; };
 		24D2E39E1E074ED500C7B8AF /* encilclaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */; };
-		24DD8E9F1E0A47F90023520A /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD8E9E1E0A47F90023520A /* StationViewCell.swift */; };
 		BE11164C5AB66AED68C765CB /* Pods_encilclaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */; };
 		C5A5AEA4FBEA7228E377FF52 /* Pods_encilclaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */; };
+		FC116BE9CB02B3DC5DCE3648 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1167547ABA1DD0118FDA86 /* StationViewCell.swift */; };
+		FC116C2A7E3460D277BCB285 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11622FAF582E77ABCC363C /* StationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 		1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilclaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D2E37A1E074ED500C7B8AF /* encilcla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = encilcla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24D2E37F1E074ED500C7B8AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24D2E3821E074ED500C7B8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24D2E3841E074ED500C7B8AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24D2E3871E074ED500C7B8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,13 +53,14 @@
 		24D2E3991E074ED500C7B8AF /* encilclaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = encilclaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encilclaUITests.swift; sourceTree = "<group>"; };
 		24D2E39F1E074ED500C7B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24DD8E9E1E0A47F90023520A /* StationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
 		3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilcla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9F3031FFA0D4785FB2C644 /* Pods-encilclaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8D8786E8CBCFA9B3296947B8 /* Pods-encilcla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilcla.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilcla/Pods-encilcla.release.xcconfig"; sourceTree = "<group>"; };
 		909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilclaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F36A6A83831CFAA3AB5B80 /* Pods-encilcla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilcla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilcla/Pods-encilcla.debug.xcconfig"; sourceTree = "<group>"; };
 		C1AA064010660C17CFEACF25 /* Pods-encilclaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC11622FAF582E77ABCC363C /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
+		FC1167547ABA1DD0118FDA86 /* StationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,12 +140,11 @@
 			isa = PBXGroup;
 			children = (
 				24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */,
-				24D2E37F1E074ED500C7B8AF /* ViewController.swift */,
 				24D2E3811E074ED500C7B8AF /* Main.storyboard */,
 				24D2E3841E074ED500C7B8AF /* Assets.xcassets */,
 				24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */,
 				24D2E3891E074ED500C7B8AF /* Info.plist */,
-				24DD8E9E1E0A47F90023520A /* StationViewCell.swift */,
+				FC11672D610AE0F4BFB5B61D /* stations */,
 			);
 			path = encilcla;
 			sourceTree = "<group>";
@@ -166,6 +165,15 @@
 				24D2E39F1E074ED500C7B8AF /* Info.plist */,
 			);
 			path = encilclaUITests;
+			sourceTree = "<group>";
+		};
+		FC11672D610AE0F4BFB5B61D /* stations */ = {
+			isa = PBXGroup;
+			children = (
+				FC11622FAF582E77ABCC363C /* StationViewController.swift */,
+				FC1167547ABA1DD0118FDA86 /* StationViewCell.swift */,
+			);
+			path = stations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,9 +460,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DD8E9F1E0A47F90023520A /* StationViewCell.swift in Sources */,
-				24D2E3801E074ED500C7B8AF /* ViewController.swift in Sources */,
 				24D2E37E1E074ED500C7B8AF /* AppDelegate.swift in Sources */,
+				FC116C2A7E3460D277BCB285 /* StationViewController.swift in Sources */,
+				FC116BE9CB02B3DC5DCE3648 /* StationViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,7 +615,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = encilcla/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilcla;
+				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encicla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -621,7 +629,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = encilcla/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilcla;
+				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encicla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
