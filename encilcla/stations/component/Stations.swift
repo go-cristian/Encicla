@@ -11,10 +11,6 @@ class DefaultStations: Stations {
   private let gps: GPS
   private let api: StationsAPI
 
-  static func build() -> Stations {
-    return DefaultStations(gps: DefaultGPS(), api: DefaultStationsAPI())
-  }
-
   init(gps: GPS, api: StationsAPI) {
     self.gps = gps
     self.api = api

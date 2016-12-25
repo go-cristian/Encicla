@@ -11,8 +11,9 @@ class StationViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Estaciones"
-    disposable = DefaultStations.build().near().subscribe(onNext: {
+    let gps = DefaultGPS()
+    let api = DefaultStationsAPI()
+    disposable = DefaultStations(gps: gps, api: api).near().subscribe(onNext: {
       response in
       self.disposable?.dispose()
       let stations = response.0
