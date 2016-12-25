@@ -7,7 +7,7 @@ protocol GPS {
 
 class DefaultGPS: NSObject, GPS, CLLocationManagerDelegate {
 
-  var observer: AnyObserver<CLLocation>?
+  private var observer: AnyObserver<CLLocation>?
 
   internal func locate() -> Observable<CLLocation> {
     return Observable.create {
@@ -20,13 +20,13 @@ class DefaultGPS: NSObject, GPS, CLLocationManagerDelegate {
     }
   }
 
-  func locationManager(_ manager: CLLocationManager,
+  internal func locationManager(_ manager: CLLocationManager,
     didUpdateLocations locations: Array<CLLocation>) {
     observer?.on(.next(locations.first!))
     observer?.on(.completed)
   }
 
-  func locationManager(_ manager: CLLocationManager,
+  internal func locationManager(_ manager: CLLocationManager,
     didChangeAuthorization status: CLAuthorizationStatus) {
     if status == .authorizedWhenInUse || status == .authorizedAlways {
       manager.startUpdatingLocation()

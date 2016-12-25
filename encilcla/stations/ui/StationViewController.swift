@@ -3,7 +3,7 @@ import RxSwift
 import CoreLocation
 import GoogleMaps
 
-class StationViewController: UIViewController {
+class StationViewController: UIViewController, StationsViewDelegate {
 
   @IBOutlet var stationsView: StationsView!
   @IBOutlet var mapView: StationsMapView!
@@ -11,6 +11,7 @@ class StationViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    stationsView.onClickDelegate = self
     let gps = DefaultGPS()
     let api = DefaultStationsAPI()
     disposable = DefaultStations(gps: gps, api: api).near().subscribe(onNext: {
@@ -19,12 +20,17 @@ class StationViewController: UIViewController {
       let stations = response.0
       let location = response.1
       self.stationsView.add(stations: stations)
-      self.mapView.updateMap(location: location, station: stations.first!)
+      self.mapView.updateMap(location: location)
+      self.mapView.updateMap(station: stations.first!)
     })
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+
+  internal func stationSelected(station: Station) {
+    mapView.updateMap(station: station)
   }
 }
 

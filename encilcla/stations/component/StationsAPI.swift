@@ -9,7 +9,7 @@ protocol StationsAPI {
 
 class DefaultStationsAPI: StationsAPI {
 
-  let URL = "http://www.encicla.gov.co/status/"
+  private let URL = "http://www.encicla.gov.co/status/"
 
   internal func stations() -> Observable<[Station]> {
     return Observable.create {
@@ -25,12 +25,12 @@ class DefaultStationsAPI: StationsAPI {
   }
 }
 
-class BikeServerResponse: Mappable {
+private class BikeServerResponse: Mappable {
   private var stations: [BikeResponseStation]?
 
   required init?(map: Map) {}
 
-  func mapping(map: Map) {
+  internal func mapping(map: Map) {
     stations <- map["stations"]
   }
 
@@ -53,7 +53,7 @@ private class BikeResponseStation: Mappable {
 
   required init?(map: Map) {}
 
-  func mapping(map: Map) {
+  internal func mapping(map: Map) {
     items <- map["items"]
   }
 }
@@ -67,7 +67,7 @@ private class BikeResponseItem: Mappable {
 
   required init?(map: Map) {}
 
-  func mapping(map: Map) {
+  internal func mapping(map: Map) {
     lat <- map["lat"]
     lon <- map["lon"]
     name <- map["name"]
