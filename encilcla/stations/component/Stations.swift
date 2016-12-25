@@ -23,14 +23,10 @@ class DefaultStations: Stations {
   internal func near() -> Observable<([Station], CLLocation)> {
     return Observable.zip(gps.locate(), api.stations()) {
       location, response throws -> ([Station], CLLocation) in
-      return (self.sort(location: location, response: response), location)
+      return (Array(response.sorted {
+        $0.distance(location: location) < $1.distance(location: location)
+      }[0 ... DefaultStations.LIMIT]), location)
     }
-  }
-
-  func sort(location: CLLocation, response: [Station]) -> [Station] {
-    return Array(response.sorted {
-      $0.distance(location: location) < $1.distance(location: location)
-    }[0 ... DefaultStations.LIMIT])
   }
 }
 

@@ -36,7 +36,8 @@ class BikeServerResponse: Mappable {
 
   func value() -> [Station] {
     return stations!.flatMap { $0.items!.flatMap { $0 } }
-      .filter { $0.bikes! > 0 }.map { map(item: $0) }
+                    .filter { $0.bikes! > 0 }
+                    .map { map(item: $0) }
   }
 
   private func map(item: BikeResponseItem) -> Station {

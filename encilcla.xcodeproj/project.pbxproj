@@ -21,6 +21,8 @@
 		FC11639EB98E8823147484C2 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */; };
 		FC11669EF45CDE677E6E52FC /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11618B4AF1776B2DA35223 /* StationViewController.swift */; };
 		FC1166A9A3773C56F824506C /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116B36A5E9B82AF1FF0576 /* Stations.swift */; };
+		FC116C113DBFBEDE11301D37 /* StationsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116F83A76E800F6750A579 /* StationsMapView.swift */; };
+		FC116EBE43F87892FDC3B658 /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11661B0896091769F4A4F8 /* StationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +66,10 @@
 		C1AA064010660C17CFEACF25 /* Pods-encilclaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC11618B4AF1776B2DA35223 /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		FC11628D3107EC2591E47379 /* StationsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsAPI.swift; sourceTree = "<group>"; };
+		FC11661B0896091769F4A4F8 /* StationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
 		FC1168140B1622758056B349 /* GPS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPS.swift; sourceTree = "<group>"; };
 		FC116B36A5E9B82AF1FF0576 /* Stations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		FC116F83A76E800F6750A579 /* StationsMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsMapView.swift; sourceTree = "<group>"; };
 		FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +200,8 @@
 			children = (
 				FC11618B4AF1776B2DA35223 /* StationViewController.swift */,
 				FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */,
+				FC11661B0896091769F4A4F8 /* StationsView.swift */,
+				FC116F83A76E800F6750A579 /* StationsMapView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -499,6 +505,8 @@
 				FC1166A9A3773C56F824506C /* Stations.swift in Sources */,
 				FC11669EF45CDE677E6E52FC /* StationViewController.swift in Sources */,
 				FC11639EB98E8823147484C2 /* StationViewCell.swift in Sources */,
+				FC116EBE43F87892FDC3B658 /* StationsView.swift in Sources */,
+				FC116C113DBFBEDE11301D37 /* StationsMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

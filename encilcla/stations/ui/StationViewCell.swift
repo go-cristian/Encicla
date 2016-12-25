@@ -9,8 +9,9 @@ class StationViewCell: UITableViewCell {
 
   var station: Station? {
     didSet {
-      nameView.text = station?.name
-      if let bikes = station?.bikes { bikesView.text = String(describing: bikes) }
+      guard let station = station else { return }
+      nameView.text = station.name
+      bikesView.text = String(describing: station.bikes)
     }
   }
 
