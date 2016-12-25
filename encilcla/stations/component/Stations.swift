@@ -7,8 +7,9 @@ protocol Stations {
 
 class DefaultStations: Stations {
 
-  let gps: GPS
-  let api: StationsAPI
+  private static let LIMIT = 5
+  private let gps: GPS
+  private let api: StationsAPI
 
   static func build() -> Stations {
     return DefaultStations(gps: DefaultGPS(), api: DefaultStationsAPI())
@@ -20,20 +21,16 @@ class DefaultStations: Stations {
   }
 
   internal func near() -> Observable<([Station], CLLocation)> {
-    return gps.locate().flatMap {
-      location in
-      self.api.stations().map {
-          response throws -> ([Station], CLLocation) in
-          return (self.stations(location: location, response: response),
-            location)
-        }
+    return Observable.zip(gps.locate(), api.stations()) {
+      location, response throws -> ([Station], CLLocation) in
+      return (self.sort(location: location, response: response), location)
     }
   }
 
-  func stations(location: CLLocation, response: [Station]) -> [Station] {
-    return response.sorted {
+  func sort(location: CLLocation, response: [Station]) -> [Station] {
+    return Array(response.sorted {
       $0.distance(location: location) < $1.distance(location: location)
-    }
+    }[0 ... DefaultStations.LIMIT])
   }
 }
 

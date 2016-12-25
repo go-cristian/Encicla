@@ -5,8 +5,10 @@ import GoogleMaps
 
 class StationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-  @IBOutlet var stationsView: UITableView!
-  @IBOutlet var mapView: GMSMapView!
+  
+    @IBOutlet var stationsView: UITableView!
+  
+    @IBOutlet var mapView: GMSMapView!
   var stationMarker: GMSMarker?
   var stations: [Station]? = []
   var disposable: Disposable?
