@@ -7,7 +7,7 @@ class StationViewCell: UITableViewCell {
   @IBOutlet var nameView: UILabel!
   @IBOutlet var bikesView: UILabel!
 
-  var station: BikeResponseItem? {
+  var station: Station? {
     didSet {
       nameView.text = station?.name
       if let bikes = station?.bikes { bikesView.text = String(describing: bikes) }

@@ -16,8 +16,11 @@
 		24D2E39E1E074ED500C7B8AF /* encilclaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */; };
 		BE11164C5AB66AED68C765CB /* Pods_encilclaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */; };
 		C5A5AEA4FBEA7228E377FF52 /* Pods_encilclaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */; };
-		FC116BE9CB02B3DC5DCE3648 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1167547ABA1DD0118FDA86 /* StationViewCell.swift */; };
-		FC116C2A7E3460D277BCB285 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11622FAF582E77ABCC363C /* StationViewController.swift */; };
+		FC1161B16DA4A614A343091B /* StationsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11628D3107EC2591E47379 /* StationsAPI.swift */; };
+		FC1162F25F885270B1173767 /* GPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1168140B1622758056B349 /* GPS.swift */; };
+		FC11639EB98E8823147484C2 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */; };
+		FC11669EF45CDE677E6E52FC /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11618B4AF1776B2DA35223 /* StationViewController.swift */; };
+		FC1166A9A3773C56F824506C /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116B36A5E9B82AF1FF0576 /* Stations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +62,11 @@
 		909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilclaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F36A6A83831CFAA3AB5B80 /* Pods-encilcla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilcla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilcla/Pods-encilcla.debug.xcconfig"; sourceTree = "<group>"; };
 		C1AA064010660C17CFEACF25 /* Pods-encilclaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FC11622FAF582E77ABCC363C /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
-		FC1167547ABA1DD0118FDA86 /* StationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
+		FC11618B4AF1776B2DA35223 /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
+		FC11628D3107EC2591E47379 /* StationsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsAPI.swift; sourceTree = "<group>"; };
+		FC1168140B1622758056B349 /* GPS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPS.swift; sourceTree = "<group>"; };
+		FC116B36A5E9B82AF1FF0576 /* Stations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 				24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */,
 				24D2E3891E074ED500C7B8AF /* Info.plist */,
 				FC11672D610AE0F4BFB5B61D /* stations */,
+				FC116BCCE28409085B61B65F /* gps */,
 			);
 			path = encilcla;
 			sourceTree = "<group>";
@@ -170,10 +177,36 @@
 		FC11672D610AE0F4BFB5B61D /* stations */ = {
 			isa = PBXGroup;
 			children = (
-				FC11622FAF582E77ABCC363C /* StationViewController.swift */,
-				FC1167547ABA1DD0118FDA86 /* StationViewCell.swift */,
+				FC116F35859375D64D1F7E8E /* component */,
+				FC116C7D668DE2A8F4C5F6EC /* ui */,
 			);
 			path = stations;
+			sourceTree = "<group>";
+		};
+		FC116BCCE28409085B61B65F /* gps */ = {
+			isa = PBXGroup;
+			children = (
+				FC1168140B1622758056B349 /* GPS.swift */,
+			);
+			path = gps;
+			sourceTree = "<group>";
+		};
+		FC116C7D668DE2A8F4C5F6EC /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				FC11618B4AF1776B2DA35223 /* StationViewController.swift */,
+				FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		FC116F35859375D64D1F7E8E /* component */ = {
+			isa = PBXGroup;
+			children = (
+				FC11628D3107EC2591E47379 /* StationsAPI.swift */,
+				FC116B36A5E9B82AF1FF0576 /* Stations.swift */,
+			);
+			path = component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,8 +494,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24D2E37E1E074ED500C7B8AF /* AppDelegate.swift in Sources */,
-				FC116C2A7E3460D277BCB285 /* StationViewController.swift in Sources */,
-				FC116BE9CB02B3DC5DCE3648 /* StationViewCell.swift in Sources */,
+				FC1162F25F885270B1173767 /* GPS.swift in Sources */,
+				FC1161B16DA4A614A343091B /* StationsAPI.swift in Sources */,
+				FC1166A9A3773C56F824506C /* Stations.swift in Sources */,
+				FC11669EF45CDE677E6E52FC /* StationViewController.swift in Sources */,
+				FC11639EB98E8823147484C2 /* StationViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

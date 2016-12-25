@@ -34,11 +34,14 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KIP-i7-ae5" id="zcs-iE-Kg3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXl-NF-07b">
                                                     <rect key="frame" x="0.0" y="8" width="375" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="375" id="97C-M8-LWj"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -51,25 +54,26 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="SXl-NF-07b" secondAttribute="trailing" id="1Gs-Ia-NXd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="uyM-D4-ISV" secondAttribute="bottom" id="IOG-wP-8P2"/>
-                                                <constraint firstItem="SXl-NF-07b" firstAttribute="leading" secondItem="zcs-iE-Kg3" secondAttribute="leading" id="Man-Qo-v4f"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="uyM-D4-ISV" secondAttribute="trailing" id="PWd-sa-gcI"/>
-                                                <constraint firstItem="uyM-D4-ISV" firstAttribute="top" secondItem="zcs-iE-Kg3" secondAttribute="topMargin" id="YYu-re-OQ4"/>
-                                                <constraint firstItem="SXl-NF-07b" firstAttribute="centerY" secondItem="zcs-iE-Kg3" secondAttribute="centerY" id="f37-ud-Zbj"/>
-                                                <constraint firstItem="uyM-D4-ISV" firstAttribute="bottom" secondItem="SXl-NF-07b" secondAttribute="bottom" id="kKU-Dr-ujG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uyM-D4-ISV" secondAttribute="bottom" id="3tJ-3M-ff1"/>
+                                                <constraint firstItem="uyM-D4-ISV" firstAttribute="centerY" secondItem="zcs-iE-Kg3" secondAttribute="centerY" id="4H8-tU-3XY"/>
+                                                <constraint firstItem="uyM-D4-ISV" firstAttribute="trailing" secondItem="zcs-iE-Kg3" secondAttribute="trailingMargin" id="A6V-Ti-Hhs"/>
+                                                <constraint firstItem="SXl-NF-07b" firstAttribute="leading" secondItem="zcs-iE-Kg3" secondAttribute="leadingMargin" constant="-8" id="Bvr-Cf-yzm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SXl-NF-07b" secondAttribute="bottom" id="DFz-M7-XXF"/>
+                                                <constraint firstItem="SXl-NF-07b" firstAttribute="top" secondItem="zcs-iE-Kg3" secondAttribute="topMargin" id="NbC-oL-ckB"/>
+                                                <constraint firstItem="SXl-NF-07b" firstAttribute="centerX" secondItem="zcs-iE-Kg3" secondAttribute="centerX" id="Ypm-An-rPK"/>
+                                                <constraint firstItem="uyM-D4-ISV" firstAttribute="top" secondItem="zcs-iE-Kg3" secondAttribute="topMargin" id="iTB-Ys-EPB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="bikesView" destination="uyM-D4-ISV" id="8BR-GO-D69"/>
-                                            <outlet property="nameView" destination="SXl-NF-07b" id="lJa-IX-oT2"/>
+                                            <outlet property="bikesView" destination="uyM-D4-ISV" id="Bdi-88-WP0"/>
+                                            <outlet property="nameView" destination="SXl-NF-07b" id="1g0-lX-jrh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FIe-rz-Xc8"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wqT-Qq-kxB"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="HZn-KW-A12"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YMl-Th-ISn"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -93,8 +97,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="2h0-KI-JvR"/>
                     <connections>
-                        <outlet property="mapView" destination="qNS-6B-999" id="6yu-c1-ZC2"/>
-                        <outlet property="stationsView" destination="Tss-qA-qJN" id="rjl-lE-tr7"/>
+                        <outlet property="mapView" destination="qNS-6B-999" id="jAq-tV-1Cy"/>
+                        <outlet property="stationsView" destination="Tss-qA-qJN" id="2tL-jm-cBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
