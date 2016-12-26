@@ -7,82 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20595FBB47A473AA04DB13B3 /* Pods_encilcla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */; };
-		24D2E37E1E074ED500C7B8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */; };
-		24D2E3831E074ED500C7B8AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3811E074ED500C7B8AF /* Main.storyboard */; };
-		24D2E3851E074ED500C7B8AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3841E074ED500C7B8AF /* Assets.xcassets */; };
-		24D2E3881E074ED500C7B8AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */; };
-		24D2E3931E074ED500C7B8AF /* encilclaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E3921E074ED500C7B8AF /* encilclaTests.swift */; };
-		24D2E39E1E074ED500C7B8AF /* encilclaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */; };
-		2A61D653A01283A775A59A0A /* Pods_enciclaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59080BC1BC3BE3412A05644D /* Pods_enciclaUITests.framework */; };
+		242BE25F1E10C509003EF255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2471E10C508003EF255 /* AppDelegate.swift */; };
+		242BE2601E10C509003EF255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242BE2481E10C508003EF255 /* Assets.xcassets */; };
+		242BE2611E10C509003EF255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242BE2491E10C508003EF255 /* LaunchScreen.storyboard */; };
+		242BE2621E10C509003EF255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242BE24B1E10C508003EF255 /* Main.storyboard */; };
+		242BE2631E10C509003EF255 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE24E1E10C508003EF255 /* Location.swift */; };
+		242BE2651E10C509003EF255 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2521E10C508003EF255 /* Stations.swift */; };
+		242BE2661E10C509003EF255 /* StationsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2531E10C508003EF255 /* StationsAPI.swift */; };
+		242BE2671E10C509003EF255 /* StationsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2551E10C509003EF255 /* StationsMapView.swift */; };
+		242BE2681E10C509003EF255 /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2561E10C509003EF255 /* StationsView.swift */; };
+		242BE2691E10C509003EF255 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2571E10C509003EF255 /* StationViewCell.swift */; };
+		242BE26A1E10C509003EF255 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2581E10C509003EF255 /* StationViewController.swift */; };
 		594C174B267DA257B679BF24 /* Pods_encicla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF1B085E352F73806F97C41 /* Pods_encicla.framework */; };
-		9445B1DDBF9D02CB75049874 /* Pods_enciclaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2082D2736DF25114C8D0797D /* Pods_enciclaTests.framework */; };
-		BE11164C5AB66AED68C765CB /* Pods_encilclaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */; };
-		C5A5AEA4FBEA7228E377FF52 /* Pods_encilclaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */; };
-		FC1161B16DA4A614A343091B /* StationsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11628D3107EC2591E47379 /* StationsAPI.swift */; };
-		FC1162F25F885270B1173767 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1168140B1622758056B349 /* Location.swift */; };
-		FC11639EB98E8823147484C2 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */; };
-		FC11669EF45CDE677E6E52FC /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11618B4AF1776B2DA35223 /* StationViewController.swift */; };
-		FC1166A9A3773C56F824506C /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116B36A5E9B82AF1FF0576 /* Stations.swift */; };
-		FC116C113DBFBEDE11301D37 /* StationsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116F83A76E800F6750A579 /* StationsMapView.swift */; };
-		FC116EBE43F87892FDC3B658 /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11661B0896091769F4A4F8 /* StationsView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		24D2E38F1E074ED500C7B8AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24D2E3721E074ED500C7B8AF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24D2E3791E074ED500C7B8AF;
-			remoteInfo = encilcla;
-		};
-		24D2E39A1E074ED500C7B8AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24D2E3721E074ED500C7B8AF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24D2E3791E074ED500C7B8AF;
-			remoteInfo = encilcla;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		070AFA258282054E91611B39 /* Pods-encilclaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaTests/Pods-encilclaTests.release.xcconfig"; sourceTree = "<group>"; };
 		0A4F9EB7D01B1756BC6940E5 /* Pods-enciclaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaUITests/Pods-enciclaUITests.release.xcconfig"; sourceTree = "<group>"; };
-		0B55233E27A7D8A615A289A1 /* Pods-encilclaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaTests/Pods-encilclaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilclaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2082D2736DF25114C8D0797D /* Pods_enciclaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_enciclaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		242BE2471E10C508003EF255 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		242BE2481E10C508003EF255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		242BE24A1E10C508003EF255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		242BE24C1E10C508003EF255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		242BE24E1E10C508003EF255 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		242BE24F1E10C508003EF255 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		242BE2521E10C508003EF255 /* Stations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		242BE2531E10C508003EF255 /* StationsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsAPI.swift; sourceTree = "<group>"; };
+		242BE2551E10C509003EF255 /* StationsMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsMapView.swift; sourceTree = "<group>"; };
+		242BE2561E10C509003EF255 /* StationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
+		242BE2571E10C509003EF255 /* StationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
+		242BE2581E10C509003EF255 /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		24D2E37A1E074ED500C7B8AF /* encicla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = encicla.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24D2E3821E074ED500C7B8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		24D2E3841E074ED500C7B8AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		24D2E3871E074ED500C7B8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		24D2E3891E074ED500C7B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24D2E38E1E074ED500C7B8AF /* enciclaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = enciclaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		24D2E3921E074ED500C7B8AF /* encilclaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encilclaTests.swift; sourceTree = "<group>"; };
-		24D2E3941E074ED500C7B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24D2E3991E074ED500C7B8AF /* enciclaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = enciclaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encilclaUITests.swift; sourceTree = "<group>"; };
-		24D2E39F1E074ED500C7B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilcla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42AC624D8CB8811EC771C135 /* Pods-enciclaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaTests/Pods-enciclaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59080BC1BC3BE3412A05644D /* Pods_enciclaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_enciclaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E47E216F30E8B682D2228DE /* Pods-encicla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encicla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encicla/Pods-encicla.debug.xcconfig"; sourceTree = "<group>"; };
 		76AD2EC4E17B754AFFE6FD50 /* Pods-encicla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encicla.release.xcconfig"; path = "Pods/Target Support Files/Pods-encicla/Pods-encicla.release.xcconfig"; sourceTree = "<group>"; };
-		8C9F3031FFA0D4785FB2C644 /* Pods-encilclaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.release.xcconfig"; sourceTree = "<group>"; };
-		8D8786E8CBCFA9B3296947B8 /* Pods-encilcla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilcla.release.xcconfig"; path = "Pods/Target Support Files/Pods-encilcla/Pods-encilcla.release.xcconfig"; sourceTree = "<group>"; };
-		909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encilclaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1F36A6A83831CFAA3AB5B80 /* Pods-encilcla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilcla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilcla/Pods-encilcla.debug.xcconfig"; sourceTree = "<group>"; };
 		ABF1B085E352F73806F97C41 /* Pods_encicla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encicla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02F8C0463AE4380D082F6BA /* Pods-enciclaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaUITests/Pods-enciclaUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C1AA064010660C17CFEACF25 /* Pods-encilclaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encilclaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-encilclaUITests/Pods-encilclaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFB1192F7EC90DAF11124870 /* Pods-enciclaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaTests/Pods-enciclaTests.release.xcconfig"; sourceTree = "<group>"; };
-		FC11618B4AF1776B2DA35223 /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
-		FC11628D3107EC2591E47379 /* StationsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsAPI.swift; sourceTree = "<group>"; };
-		FC11661B0896091769F4A4F8 /* StationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
-		FC1168140B1622758056B349 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		FC116B36A5E9B82AF1FF0576 /* Stations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
-		FC116F83A76E800F6750A579 /* StationsMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsMapView.swift; sourceTree = "<group>"; };
-		FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,26 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20595FBB47A473AA04DB13B3 /* Pods_encilcla.framework in Frameworks */,
 				594C174B267DA257B679BF24 /* Pods_encicla.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24D2E38B1E074ED500C7B8AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE11164C5AB66AED68C765CB /* Pods_encilclaTests.framework in Frameworks */,
-				9445B1DDBF9D02CB75049874 /* Pods_enciclaTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24D2E3961E074ED500C7B8AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5A5AEA4FBEA7228E377FF52 /* Pods_encilclaUITests.framework in Frameworks */,
-				2A61D653A01283A775A59A0A /* Pods_enciclaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +61,6 @@
 		0769667B039511974C853503 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A1F36A6A83831CFAA3AB5B80 /* Pods-encilcla.debug.xcconfig */,
-				8D8786E8CBCFA9B3296947B8 /* Pods-encilcla.release.xcconfig */,
-				0B55233E27A7D8A615A289A1 /* Pods-encilclaTests.debug.xcconfig */,
-				070AFA258282054E91611B39 /* Pods-encilclaTests.release.xcconfig */,
-				C1AA064010660C17CFEACF25 /* Pods-encilclaUITests.debug.xcconfig */,
-				8C9F3031FFA0D4785FB2C644 /* Pods-encilclaUITests.release.xcconfig */,
 				6E47E216F30E8B682D2228DE /* Pods-encicla.debug.xcconfig */,
 				76AD2EC4E17B754AFFE6FD50 /* Pods-encicla.release.xcconfig */,
 				42AC624D8CB8811EC771C135 /* Pods-enciclaTests.debug.xcconfig */,
@@ -138,9 +74,6 @@
 		19E782960F5978AC4F9E0551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B78EB199CD0B49E702EC48B /* Pods_encilcla.framework */,
-				909FAA46A1C8BCD7AAA9DF96 /* Pods_encilclaTests.framework */,
-				1D1CEBE53E8990CE15DE9550 /* Pods_encilclaUITests.framework */,
 				ABF1B085E352F73806F97C41 /* Pods_encicla.framework */,
 				2082D2736DF25114C8D0797D /* Pods_enciclaTests.framework */,
 				59080BC1BC3BE3412A05644D /* Pods_enciclaUITests.framework */,
@@ -148,12 +81,61 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		242BE2461E10C508003EF255 /* encicla */ = {
+			isa = PBXGroup;
+			children = (
+				242BE2471E10C508003EF255 /* AppDelegate.swift */,
+				242BE2481E10C508003EF255 /* Assets.xcassets */,
+				242BE2491E10C508003EF255 /* LaunchScreen.storyboard */,
+				242BE24B1E10C508003EF255 /* Main.storyboard */,
+				242BE24D1E10C508003EF255 /* gps */,
+				242BE24F1E10C508003EF255 /* Info.plist */,
+				242BE2501E10C508003EF255 /* stations */,
+			);
+			path = encicla;
+			sourceTree = "<group>";
+		};
+		242BE24D1E10C508003EF255 /* gps */ = {
+			isa = PBXGroup;
+			children = (
+				242BE24E1E10C508003EF255 /* Location.swift */,
+			);
+			path = gps;
+			sourceTree = "<group>";
+		};
+		242BE2501E10C508003EF255 /* stations */ = {
+			isa = PBXGroup;
+			children = (
+				242BE2511E10C508003EF255 /* component */,
+				242BE2541E10C508003EF255 /* ui */,
+			);
+			path = stations;
+			sourceTree = "<group>";
+		};
+		242BE2511E10C508003EF255 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				242BE2521E10C508003EF255 /* Stations.swift */,
+				242BE2531E10C508003EF255 /* StationsAPI.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		242BE2541E10C508003EF255 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				242BE2551E10C509003EF255 /* StationsMapView.swift */,
+				242BE2561E10C509003EF255 /* StationsView.swift */,
+				242BE2571E10C509003EF255 /* StationViewCell.swift */,
+				242BE2581E10C509003EF255 /* StationViewController.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
 		24D2E3711E074ED500C7B8AF = {
 			isa = PBXGroup;
 			children = (
-				24D2E37C1E074ED500C7B8AF /* encilcla */,
-				24D2E3911E074ED500C7B8AF /* encilclaTests */,
-				24D2E39C1E074ED500C7B8AF /* encilclaUITests */,
+				242BE2461E10C508003EF255 /* encicla */,
 				24D2E37B1E074ED500C7B8AF /* Products */,
 				0769667B039511974C853503 /* Pods */,
 				19E782960F5978AC4F9E0551 /* Frameworks */,
@@ -164,79 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				24D2E37A1E074ED500C7B8AF /* encicla.app */,
-				24D2E38E1E074ED500C7B8AF /* enciclaTests.xctest */,
-				24D2E3991E074ED500C7B8AF /* enciclaUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		24D2E37C1E074ED500C7B8AF /* encilcla */ = {
-			isa = PBXGroup;
-			children = (
-				24D2E37D1E074ED500C7B8AF /* AppDelegate.swift */,
-				24D2E3811E074ED500C7B8AF /* Main.storyboard */,
-				24D2E3841E074ED500C7B8AF /* Assets.xcassets */,
-				24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */,
-				24D2E3891E074ED500C7B8AF /* Info.plist */,
-				FC11672D610AE0F4BFB5B61D /* stations */,
-				FC116BCCE28409085B61B65F /* gps */,
-			);
-			path = encilcla;
-			sourceTree = "<group>";
-		};
-		24D2E3911E074ED500C7B8AF /* encilclaTests */ = {
-			isa = PBXGroup;
-			children = (
-				24D2E3921E074ED500C7B8AF /* encilclaTests.swift */,
-				24D2E3941E074ED500C7B8AF /* Info.plist */,
-			);
-			path = encilclaTests;
-			sourceTree = "<group>";
-		};
-		24D2E39C1E074ED500C7B8AF /* encilclaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				24D2E39D1E074ED500C7B8AF /* encilclaUITests.swift */,
-				24D2E39F1E074ED500C7B8AF /* Info.plist */,
-			);
-			path = encilclaUITests;
-			sourceTree = "<group>";
-		};
-		FC11672D610AE0F4BFB5B61D /* stations */ = {
-			isa = PBXGroup;
-			children = (
-				FC116F35859375D64D1F7E8E /* component */,
-				FC116C7D668DE2A8F4C5F6EC /* ui */,
-			);
-			path = stations;
-			sourceTree = "<group>";
-		};
-		FC116BCCE28409085B61B65F /* gps */ = {
-			isa = PBXGroup;
-			children = (
-				FC1168140B1622758056B349 /* Location.swift */,
-			);
-			path = gps;
-			sourceTree = "<group>";
-		};
-		FC116C7D668DE2A8F4C5F6EC /* ui */ = {
-			isa = PBXGroup;
-			children = (
-				FC11618B4AF1776B2DA35223 /* StationViewController.swift */,
-				FC116F8C3F19C679EEADFFE6 /* StationViewCell.swift */,
-				FC11661B0896091769F4A4F8 /* StationsView.swift */,
-				FC116F83A76E800F6750A579 /* StationsMapView.swift */,
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		FC116F35859375D64D1F7E8E /* component */ = {
-			isa = PBXGroup;
-			children = (
-				FC11628D3107EC2591E47379 /* StationsAPI.swift */,
-				FC116B36A5E9B82AF1FF0576 /* Stations.swift */,
-			);
-			path = component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,55 +173,13 @@
 			productReference = 24D2E37A1E074ED500C7B8AF /* encicla.app */;
 			productType = "com.apple.product-type.application";
 		};
-		24D2E38D1E074ED500C7B8AF /* enciclaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 24D2E3A51E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "enciclaTests" */;
-			buildPhases = (
-				66BBDBC46181BBF1C510FDB3 /* [CP] Check Pods Manifest.lock */,
-				24D2E38A1E074ED500C7B8AF /* Sources */,
-				24D2E38B1E074ED500C7B8AF /* Frameworks */,
-				24D2E38C1E074ED500C7B8AF /* Resources */,
-				6AD3CB9F3AE72306E4762188 /* [CP] Embed Pods Frameworks */,
-				9E826F097EFCF363CB9925C5 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				24D2E3901E074ED500C7B8AF /* PBXTargetDependency */,
-			);
-			name = enciclaTests;
-			productName = encilclaTests;
-			productReference = 24D2E38E1E074ED500C7B8AF /* enciclaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		24D2E3981E074ED500C7B8AF /* enciclaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 24D2E3A81E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "enciclaUITests" */;
-			buildPhases = (
-				0C0D8AD91688C8A613577643 /* [CP] Check Pods Manifest.lock */,
-				24D2E3951E074ED500C7B8AF /* Sources */,
-				24D2E3961E074ED500C7B8AF /* Frameworks */,
-				24D2E3971E074ED500C7B8AF /* Resources */,
-				210E82E63D3B6927164B460E /* [CP] Embed Pods Frameworks */,
-				2FE6ECA9ECD44376B24C666F /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				24D2E39B1E074ED500C7B8AF /* PBXTargetDependency */,
-			);
-			name = enciclaUITests;
-			productName = encilclaUITests;
-			productReference = 24D2E3991E074ED500C7B8AF /* enciclaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		24D2E3721E074ED500C7B8AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Iyubinest;
 				TargetAttributes = {
@@ -318,18 +187,6 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 3EUA8SZ453;
 						LastSwiftMigration = 0820;
-					};
-					24D2E38D1E074ED500C7B8AF = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3EUA8SZ453;
-						LastSwiftMigration = 0820;
-						TestTargetID = 24D2E3791E074ED500C7B8AF;
-					};
-					24D2E3981E074ED500C7B8AF = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3EUA8SZ453;
-						LastSwiftMigration = 0820;
-						TestTargetID = 24D2E3791E074ED500C7B8AF;
 					};
 				};
 			};
@@ -347,8 +204,6 @@
 			projectRoot = "";
 			targets = (
 				24D2E3791E074ED500C7B8AF /* encicla */,
-				24D2E38D1E074ED500C7B8AF /* enciclaTests */,
-				24D2E3981E074ED500C7B8AF /* enciclaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -358,59 +213,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D2E3881E074ED500C7B8AF /* LaunchScreen.storyboard in Resources */,
-				24D2E3851E074ED500C7B8AF /* Assets.xcassets in Resources */,
-				24D2E3831E074ED500C7B8AF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24D2E38C1E074ED500C7B8AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24D2E3971E074ED500C7B8AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				242BE2621E10C509003EF255 /* Main.storyboard in Resources */,
+				242BE2601E10C509003EF255 /* Assets.xcassets in Resources */,
+				242BE2611E10C509003EF255 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C0D8AD91688C8A613577643 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		210E82E63D3B6927164B460E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-enciclaUITests/Pods-enciclaUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2C7A01061298A02E42BB9F47 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,21 +237,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-encicla/Pods-encicla-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2FE6ECA9ECD44376B24C666F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-enciclaUITests/Pods-enciclaUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3A91454D53BD46DDAFD2D59E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -454,51 +250,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		66BBDBC46181BBF1C510FDB3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6AD3CB9F3AE72306E4762188 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-enciclaTests/Pods-enciclaTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9E826F097EFCF363CB9925C5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-enciclaTests/Pods-enciclaTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC0F00A797B75A84A85E54FC /* [CP] Embed Pods Frameworks */ = {
@@ -523,63 +274,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D2E37E1E074ED500C7B8AF /* AppDelegate.swift in Sources */,
-				FC1162F25F885270B1173767 /* Location.swift in Sources */,
-				FC1161B16DA4A614A343091B /* StationsAPI.swift in Sources */,
-				FC1166A9A3773C56F824506C /* Stations.swift in Sources */,
-				FC11669EF45CDE677E6E52FC /* StationViewController.swift in Sources */,
-				FC11639EB98E8823147484C2 /* StationViewCell.swift in Sources */,
-				FC116EBE43F87892FDC3B658 /* StationsView.swift in Sources */,
-				FC116C113DBFBEDE11301D37 /* StationsMapView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24D2E38A1E074ED500C7B8AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24D2E3931E074ED500C7B8AF /* encilclaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24D2E3951E074ED500C7B8AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24D2E39E1E074ED500C7B8AF /* encilclaUITests.swift in Sources */,
+				242BE2671E10C509003EF255 /* StationsMapView.swift in Sources */,
+				242BE2631E10C509003EF255 /* Location.swift in Sources */,
+				242BE2691E10C509003EF255 /* StationViewCell.swift in Sources */,
+				242BE25F1E10C509003EF255 /* AppDelegate.swift in Sources */,
+				242BE2651E10C509003EF255 /* Stations.swift in Sources */,
+				242BE2661E10C509003EF255 /* StationsAPI.swift in Sources */,
+				242BE2681E10C509003EF255 /* StationsView.swift in Sources */,
+				242BE26A1E10C509003EF255 /* StationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		24D2E3901E074ED500C7B8AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 24D2E3791E074ED500C7B8AF /* encicla */;
-			targetProxy = 24D2E38F1E074ED500C7B8AF /* PBXContainerItemProxy */;
-		};
-		24D2E39B1E074ED500C7B8AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 24D2E3791E074ED500C7B8AF /* encicla */;
-			targetProxy = 24D2E39A1E074ED500C7B8AF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		24D2E3811E074ED500C7B8AF /* Main.storyboard */ = {
+		242BE2491E10C508003EF255 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				24D2E3821E074ED500C7B8AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		24D2E3861E074ED500C7B8AF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24D2E3871E074ED500C7B8AF /* Base */,
+				242BE24A1E10C508003EF255 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		242BE24B1E10C508003EF255 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				242BE24C1E10C508003EF255 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -681,7 +403,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = encilcla/Info.plist;
+				INFOPLIST_FILE = encicla/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encicla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -695,65 +417,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = encilcla/Info.plist;
+				INFOPLIST_FILE = encicla/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encicla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		24D2E3A61E074ED500C7B8AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42AC624D8CB8811EC771C135 /* Pods-enciclaTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = encilclaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilclaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/encicla.app/encicla";
-			};
-			name = Debug;
-		};
-		24D2E3A71E074ED500C7B8AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFB1192F7EC90DAF11124870 /* Pods-enciclaTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = encilclaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilclaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/encicla.app/encicla";
-			};
-			name = Release;
-		};
-		24D2E3A91E074ED500C7B8AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B02F8C0463AE4380D082F6BA /* Pods-enciclaUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = encilclaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilclaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = encilcla;
-			};
-			name = Debug;
-		};
-		24D2E3AA1E074ED500C7B8AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A4F9EB7D01B1756BC6940E5 /* Pods-enciclaUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = encilclaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.iyubinest.encilclaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = encilcla;
 			};
 			name = Release;
 		};
@@ -774,24 +442,6 @@
 			buildConfigurations = (
 				24D2E3A31E074ED500C7B8AF /* Debug */,
 				24D2E3A41E074ED500C7B8AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		24D2E3A51E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "enciclaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24D2E3A61E074ED500C7B8AF /* Debug */,
-				24D2E3A71E074ED500C7B8AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		24D2E3A81E074ED500C7B8AF /* Build configuration list for PBXNativeTarget "enciclaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24D2E3A91E074ED500C7B8AF /* Debug */,
-				24D2E3AA1E074ED500C7B8AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

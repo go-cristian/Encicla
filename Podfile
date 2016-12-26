@@ -14,12 +14,3 @@ target 'encicla' do
   pod 'GoogleMaps'
 end
 
-target 'enciclaTests' do
-
-end
-
-target 'enciclaUITests' do
-
-
-end
-

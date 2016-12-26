@@ -3,11 +3,10 @@ import GoogleMaps
 class StationsMapView: GMSMapView {
 
   var location: CLLocation?
-  let stationMarker: GMSMarker
+  var stationMarker: GMSMarker = GMSMarker(position: CLLocationCoordinate2DMake(0, 0))
 
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    stationMarker = GMSMarker(position: CLLocationCoordinate2DMake(0, 0))
     stationMarker.map = self
   }
 
@@ -20,7 +19,7 @@ class StationsMapView: GMSMapView {
   }
 
   func updateMap(station: Station) {
-    camera = buildCamera(location, station)
+    camera = buildCamera(location: location!, station: station)
     self.stationMarker.title = station.name;
     self.stationMarker.position = CLLocationCoordinate2DMake(station.lat,
       station.lon)
@@ -29,9 +28,9 @@ class StationsMapView: GMSMapView {
 
   private func buildCamera(location: CLLocation,
     station: Station) -> GMSCameraPosition {
-    return GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!,
-      longitude: (location?.coordinate.longitude)!,
-      zoom: zoom(distance: station.distance(location: location!)))
+    return GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude),
+      longitude: location.coordinate.longitude,
+      zoom: zoom(distance: station.distance(location: location)))
   }
 
   private func zoom(distance: Double) -> Float {
