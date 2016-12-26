@@ -23,6 +23,9 @@ class StationViewController: UIViewController, StationsViewDelegate {
         self.stationsView.add(stations: stations)
         self.mapView.updateMap(location: location)
         self.mapView.updateMap(station: stations.first!)
+      }, onError: {
+        (error) -> Void in
+        //TODO: show error
       })
   }
 

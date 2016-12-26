@@ -88,19 +88,19 @@
 				242BE2481E10C508003EF255 /* Assets.xcassets */,
 				242BE2491E10C508003EF255 /* LaunchScreen.storyboard */,
 				242BE24B1E10C508003EF255 /* Main.storyboard */,
-				242BE24D1E10C508003EF255 /* gps */,
+				242BE24D1E10C508003EF255 /* location */,
 				242BE24F1E10C508003EF255 /* Info.plist */,
 				242BE2501E10C508003EF255 /* stations */,
 			);
 			path = encicla;
 			sourceTree = "<group>";
 		};
-		242BE24D1E10C508003EF255 /* gps */ = {
+		242BE24D1E10C508003EF255 /* location */ = {
 			isa = PBXGroup;
 			children = (
 				242BE24E1E10C508003EF255 /* Location.swift */,
 			);
-			path = gps;
+			path = location;
 			sourceTree = "<group>";
 		};
 		242BE2501E10C508003EF255 /* stations */ = {
