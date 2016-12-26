@@ -8,6 +8,9 @@ class StationsMapView: GMSMapView {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     marker.map = self
+    if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+      mapStyle = try! GMSMapStyle(contentsOfFileURL: styleURL)
+    }
   }
 
   func updateMap(location: CLLocation) {

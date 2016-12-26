@@ -19,6 +19,7 @@
 		242BE2691E10C509003EF255 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2571E10C509003EF255 /* StationViewCell.swift */; };
 		242BE26A1E10C509003EF255 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2581E10C509003EF255 /* StationViewController.swift */; };
 		594C174B267DA257B679BF24 /* Pods_encicla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF1B085E352F73806F97C41 /* Pods_encicla.framework */; };
+		FC11664566DFFCDACA7FC53D /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = FC1161E78DFE7C3F39204FCF /* style.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		ABF1B085E352F73806F97C41 /* Pods_encicla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_encicla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02F8C0463AE4380D082F6BA /* Pods-enciclaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaUITests/Pods-enciclaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFB1192F7EC90DAF11124870 /* Pods-enciclaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaTests/Pods-enciclaTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC1161E78DFE7C3F39204FCF /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				242BE2561E10C509003EF255 /* StationsView.swift */,
 				242BE2571E10C509003EF255 /* StationViewCell.swift */,
 				242BE2581E10C509003EF255 /* StationViewController.swift */,
+				FC1161E78DFE7C3F39204FCF /* style.json */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				242BE2621E10C509003EF255 /* Main.storyboard in Resources */,
 				242BE2601E10C509003EF255 /* Assets.xcassets in Resources */,
 				242BE2611E10C509003EF255 /* LaunchScreen.storyboard in Resources */,
+				FC11664566DFFCDACA7FC53D /* style.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
