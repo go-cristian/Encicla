@@ -17,8 +17,12 @@ class DefaultStationsAPI: StationsAPI {
       let request = Alamofire.request(self.URL);
       request.responseObject {
         (response: DataResponse<BikeServerResponse>) in
-        observer.on(.next(response.result.value!.value()))
-        observer.on(.completed)
+        if response.result.isFailure {
+          observer.on(.error(response.result.error!))
+        } else {
+          observer.on(.next(response.result.value!.value()))
+          observer.on(.completed)
+        }
       };
       return Disposables.create(with: { request.cancel() })
     }
