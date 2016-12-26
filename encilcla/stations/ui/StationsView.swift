@@ -1,6 +1,6 @@
 import UIKit
 
-class StationsView: UITableView, UITableViewDelegate, UITableViewDataSource {
+class StationsView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
   var onClickDelegate: StationsViewDelegate?
   private var stations: [Station] = []
@@ -9,6 +9,7 @@ class StationsView: UITableView, UITableViewDelegate, UITableViewDataSource {
     super.init(coder: decoder)
     delegate = self
     dataSource = self
+    collectionViewLayout = UICollectionViewFlowLayout()
   }
 
   func add(stations: [Station]) {
@@ -17,22 +18,28 @@ class StationsView: UITableView, UITableViewDelegate, UITableViewDataSource {
     self.reloadData()
   }
 
-  internal func tableView(_ tableView: UITableView,
-    didSelectRowAt indexPath: IndexPath) {
-    onClickDelegate?.stationSelected(station: self.stations[indexPath.row])
-  }
-
-  internal func tableView(_ tableView: UITableView,
-    numberOfRowsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView,
+    numberOfItemsInSection section: Int) -> Int {
     return self.stations.count
   }
 
-  internal func tableView(_ tableView: UITableView,
-    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: StationViewCell.REUSE_NAME,
-                                             for: indexPath) as! StationViewCell
+  func collectionView(_ collectionView: UICollectionView,
+    cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StationViewCell.REUSE_NAME,
+      for: indexPath) as! StationViewCell
     cell.station = self.stations[indexPath.row]
     return cell
+  }
+
+  func collectionView(_ collectionView: UICollectionView,
+    didSelectItemAt indexPath: IndexPath) {
+    onClickDelegate?.stationSelected(station: self.stations[indexPath.row])
+  }
+
+  func collectionView(_ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: frame.width, height: frame.width / 6)
   }
 }
 

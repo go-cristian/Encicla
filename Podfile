@@ -3,7 +3,7 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'encilcla' do
+target 'encicla' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
@@ -14,11 +14,11 @@ target 'encilcla' do
   pod 'GoogleMaps'
 end
 
-target 'encilclaTests' do
+target 'enciclaTests' do
 
 end
 
-target 'encilclaUITests' do
+target 'enciclaUITests' do
 
 
 end

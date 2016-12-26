@@ -1,6 +1,6 @@
 import UIKit
 
-class StationViewCell: UITableViewCell {
+class StationViewCell: UICollectionViewCell {
 
   static let REUSE_NAME = "StationViewCell"
 
@@ -13,13 +13,5 @@ class StationViewCell: UITableViewCell {
       nameView.text = station.name
       bikesView.text = String(describing: station.bikes)
     }
-  }
-
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  }
-
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
   }
 }

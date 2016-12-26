@@ -7,21 +7,21 @@ protocol Stations {
 
 class DefaultStations: Stations {
 
-  private static let LIMIT = 5
-  private let gps: GPS
+  private static let LIMIT = 3
+  private let location: Location
   private let api: StationsAPI
 
-  init(gps: GPS, api: StationsAPI) {
-    self.gps = gps
+  init(location: Location, api: StationsAPI) {
+    self.location = location
     self.api = api
   }
 
   internal func near() -> Observable<([Station], CLLocation)> {
-    return Observable.zip(gps.locate(), api.stations()) {
+    return Observable.zip(self.location.locate(), api.stations()) {
       location, response throws -> ([Station], CLLocation) in
       return (Array(response.sorted {
         $0.distance(location: location) < $1.distance(location: location)
-      }[0 ... DefaultStations.LIMIT]), location)
+      }[0 ... DefaultStations.LIMIT - 1]), location)
     }
   }
 }
