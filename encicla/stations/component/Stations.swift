@@ -26,7 +26,7 @@ class DefaultStations: Stations {
     return self.locationRepo.locate().flatMap {
       location in
       self.stationsApiRepo.stations().flatMap({
-          (stations: [Station]) in
+          stations in
           return Observable.from(Array(stations.sorted {
             $0.distance(location: location) < $1.distance(location: location)
           }))

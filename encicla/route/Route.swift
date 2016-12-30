@@ -15,8 +15,8 @@ class DefaultRoute: Route {
     to: CLLocation) -> Observable<GMSPolyline> {
 
     let BASE_URL = "https://maps.googleapis.com/maps/api/directions/json?"
-    let ORIGIN = "origin=\(from.coordinate.latitude),\(from.coordinate.latitude)&"
-    let DESTINATION = "destination=\(to.coordinate.latitude),\(to.coordinate.latitude)&"
+    let ORIGIN = "origin=\(from.coordinate.latitude),\(from.coordinate.longitude)&"
+    let DESTINATION = "destination=\(to.coordinate.latitude),\(to.coordinate.longitude)&"
     let MODE = "mode=walking&"
     let KEY = "key=AIzaSyC8bcA21C-TrIu-lGQlS7K5dozkO0En-tM"
     let URL = BASE_URL + ORIGIN + DESTINATION + MODE + KEY
@@ -55,25 +55,32 @@ class DefaultRoute: Route {
 
 private class RouteServerResponse: Mappable {
 
-  private var route: RouteResponse?
+  private var routes: [RouteResponse]?
 
   required init?(map: Map) {}
 
   internal func mapping(map: Map) {
-    route <- map["route"]
+    routes <- map["routes"]
   }
 
   func valid() -> Bool {
-    return route != nil && route!.overview_polyline != nil
+    return routes != nil
   }
 
   func value() -> GMSPolyline {
-    return GMSPolyline(path: GMSMutablePath(fromEncodedPath: (route?.overview_polyline?.points!)!))
+    let path = GMSMutablePath()
+    routes?.first?.legs?.first?.steps?.map {
+      path.add(CLLocationCoordinate2DMake(($0.start_location?.lat)!,
+        ($0.start_location?.lng)!))
+      path.add(CLLocationCoordinate2DMake(($0.end_location?.lat)!,
+        ($0.end_location?.lng)!))
+    }
+    return GMSPolyline(path: path)
   }
 }
 
 private class RouteResponse: Mappable {
-  private var legs: [LegsResponse]?
+  var legs: [LegsResponse]?
   var overview_polyline: OverviewPolyline?
 
   required init?(map: Map) {}
@@ -87,7 +94,7 @@ private class RouteResponse: Mappable {
 private class LegsResponse: Mappable {
   private var start_location: PositionResponse?
   private var end_location: PositionResponse?
-  private var steps: StepResponse?
+  var steps: [StepResponse]?
 
   required init?(map: Map) {}
 
@@ -109,9 +116,9 @@ private class OverviewPolyline: Mappable {
 }
 
 private class StepResponse: Mappable {
-  private var start_location: PositionResponse?
-  private var end_location: PositionResponse?
-  private var polyline: OverviewPolyline?
+  var start_location: PositionResponse?
+  var end_location: PositionResponse?
+  var polyline: OverviewPolyline?
 
   required init?(map: Map) {}
 
@@ -123,13 +130,13 @@ private class StepResponse: Mappable {
 }
 
 private class PositionResponse: Mappable {
-  private var lat: Double?
-  private var lon: Double?
+  var lat: Double?
+  var lng: Double?
 
   required init?(map: Map) {}
 
   internal func mapping(map: Map) {
     lat <- map["lat"]
-    lon <- map["lon"]
+    lng <- map["lng"]
   }
 }
