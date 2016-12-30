@@ -31,6 +31,6 @@ class LoadingView: UIView {
   }
 
   private func timingFunction() -> CAMediaTimingFunction {
-    return CAMediaTimingFunction(controlPoints: 0.04, 0.01, 0.69, 1.0)
+    return CAMediaTimingFunction(controlPoints: 0.0, 0.25, 0.75, 1.0)
   }
 }

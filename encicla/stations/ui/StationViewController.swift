@@ -14,9 +14,16 @@ class StationViewController: UIViewController, StationsViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     stationsView.onClickDelegate = self
-    mapView.isHidden = true
+    mapView.isUserInteractionEnabled = false
     stationsView.isHidden = true
+    self.request()
+  }
 
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+
+  private func request() {
     //TODO: find a way to use a dependency injection container
     let locationRepo = DefaultLocation()
     let routesRepo = DefaultRoute()
@@ -24,7 +31,6 @@ class StationViewController: UIViewController, StationsViewDelegate {
     let stationsRepo = DefaultStations(locationRepo: locationRepo,
       routesRepo: routesRepo,
       stationsApiRepo: stationsApiRepo)
-
     disposable = stationsRepo
       .near()
       .subscribeOn(MainScheduler.instance)
@@ -33,23 +39,40 @@ class StationViewController: UIViewController, StationsViewDelegate {
         self.updateUI(location: response.0, stations: response.1);
       }, onError: {
         (error) -> Void in
-        //TODO: show error
-        print(error)
+        if error._code == CLError.denied.rawValue {
+          self.settings()
+        } else {
+          self.showError()
+        }
       })
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+  private func updateUI(location: CLLocation, stations: [PolylineStation]) {
+    disposable?.dispose()
+    mapView.isUserInteractionEnabled = true
+    stationsView.isHidden = false
+    loadingView.isHidden = true
+    stationsView.add(stations: stations)
+    mapView.updateMap(location: location)
+    mapView.updateMap(station: stations.first!)
   }
 
-  private func updateUI(location: CLLocation, stations: [PolylineStation]) {
-    self.disposable?.dispose()
-    self.mapView.isHidden = false
-    self.stationsView.isHidden = false
-    self.loadingView.isHidden = true
-    self.stationsView.add(stations: stations)
-    self.mapView.updateMap(location: location)
-    self.mapView.updateMap(station: stations.first!)
+  private func showError() {
+    loadingView.isHidden = true
+    Snackbar.show(view: self.view, message: "There is an error") {
+      snackbar in
+      self.request()
+      snackbar.removeFromSuperview()
+    }
+  }
+
+  private func settings() {
+    Snackbar.show(view: self.view, message: "Please approve permission") {
+      snackbar in
+      let url = URL(string: UIApplicationOpenSettingsURLString)
+      UIApplication.shared.openURL(url!)
+      snackbar.removeFromSuperview()
+    }
   }
 
   internal func stationSelected(station: PolylineStation) {

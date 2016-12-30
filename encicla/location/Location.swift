@@ -30,7 +30,7 @@ class DefaultLocation: NSObject, Location, CLLocationManagerDelegate {
     didChangeAuthorization status: CLAuthorizationStatus) {
     if status == .authorizedWhenInUse || status == .authorizedAlways {
       manager.startUpdatingLocation()
-    } else {
+    } else if status == .denied {
       observer?.on(.error(CLError(.denied)))
     }
   }
