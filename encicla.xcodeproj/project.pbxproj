@@ -19,7 +19,9 @@
 		242BE2691E10C509003EF255 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2571E10C509003EF255 /* StationViewCell.swift */; };
 		242BE26A1E10C509003EF255 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2581E10C509003EF255 /* StationViewController.swift */; };
 		594C174B267DA257B679BF24 /* Pods_encicla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF1B085E352F73806F97C41 /* Pods_encicla.framework */; };
+		FC1165FFBB4DE174676DFB89 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1169CB96059AB701234C1E /* LoadingView.swift */; };
 		FC11664566DFFCDACA7FC53D /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = FC1161E78DFE7C3F39204FCF /* style.json */; };
+		FC1169447E1C19AB0B97DFF5 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116B5590188E340E9283C4 /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		B02F8C0463AE4380D082F6BA /* Pods-enciclaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaUITests/Pods-enciclaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFB1192F7EC90DAF11124870 /* Pods-enciclaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaTests/Pods-enciclaTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC1161E78DFE7C3F39204FCF /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		FC1169CB96059AB701234C1E /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FC116B5590188E340E9283C4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 				242BE24D1E10C508003EF255 /* location */,
 				242BE24F1E10C508003EF255 /* Info.plist */,
 				242BE2501E10C508003EF255 /* stations */,
+				FC116AD13BEF669711D01874 /* route */,
 			);
 			path = encicla;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				242BE2571E10C509003EF255 /* StationViewCell.swift */,
 				242BE2581E10C509003EF255 /* StationViewController.swift */,
 				FC1161E78DFE7C3F39204FCF /* style.json */,
+				FC1169CB96059AB701234C1E /* LoadingView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -151,6 +157,14 @@
 				24D2E37A1E074ED500C7B8AF /* encicla.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FC116AD13BEF669711D01874 /* route */ = {
+			isa = PBXGroup;
+			children = (
+				FC116B5590188E340E9283C4 /* Route.swift */,
+			);
+			path = route;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +300,8 @@
 				242BE2661E10C509003EF255 /* StationsAPI.swift in Sources */,
 				242BE2681E10C509003EF255 /* StationsView.swift in Sources */,
 				242BE26A1E10C509003EF255 /* StationViewController.swift in Sources */,
+				FC1165FFBB4DE174676DFB89 /* LoadingView.swift in Sources */,
+				FC1169447E1C19AB0B97DFF5 /* Route.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

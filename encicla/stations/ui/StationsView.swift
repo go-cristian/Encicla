@@ -3,7 +3,7 @@ import UIKit
 class StationsView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
   var onClickDelegate: StationsViewDelegate?
-  private var stations: [Station] = []
+  private var stations: [PolylineStation] = []
 
   required init?(coder decoder: NSCoder) {
     super.init(coder: decoder)
@@ -12,7 +12,7 @@ class StationsView: UICollectionView, UICollectionViewDelegate, UICollectionView
     collectionViewLayout = UICollectionViewFlowLayout()
   }
 
-  func add(stations: [Station]) {
+  func add(stations: [PolylineStation]) {
     self.stations.removeAll()
     self.stations.append(contentsOf: stations)
     self.reloadData()
@@ -44,5 +44,5 @@ class StationsView: UICollectionView, UICollectionViewDelegate, UICollectionView
 }
 
 protocol StationsViewDelegate {
-  func stationSelected(station: Station)
+  func stationSelected(station: PolylineStation)
 }

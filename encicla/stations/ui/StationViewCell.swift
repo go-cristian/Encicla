@@ -7,7 +7,7 @@ class StationViewCell: UICollectionViewCell {
   @IBOutlet var nameView: UILabel!
   @IBOutlet var bikesView: UILabel!
 
-  var station: Station? {
+  var station: PolylineStation? {
     didSet {
       guard let station = station else { return }
       nameView.text = station.name
