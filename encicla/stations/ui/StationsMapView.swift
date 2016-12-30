@@ -30,6 +30,7 @@ class StationsMapView: GMSMapView {
 
     self.marker.title = station.name;
     self.marker.position = CLLocationCoordinate2DMake(station.lat, station.lon)
+    self.marker.map = self
 
     station.polyline.map = self
 

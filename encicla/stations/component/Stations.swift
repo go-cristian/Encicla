@@ -30,7 +30,7 @@ class DefaultStations: Stations {
           return Observable.from(Array(stations.sorted {
             $0.distance(location: location) < $1.distance(location: location)
           }))
-        }).take(LIMIT).flatMap({
+        }).take(DefaultStations.LIMIT).flatMap({
           station in
           self.routesRepo.calculate(from: location,
               to: CLLocation(latitude: station.lat, longitude: station.lon))
