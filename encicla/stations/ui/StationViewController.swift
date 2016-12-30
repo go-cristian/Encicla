@@ -17,6 +17,7 @@ class StationViewController: UIViewController, StationsViewDelegate {
     mapView.isHidden = true
     stationsView.isHidden = true
 
+    //TODO: find a way to use a dependency injection container
     let locationRepo = DefaultLocation()
     let routesRepo = DefaultRoute()
     let stationsApiRepo = DefaultStationsAPI()
@@ -24,17 +25,12 @@ class StationViewController: UIViewController, StationsViewDelegate {
       routesRepo: routesRepo,
       stationsApiRepo: stationsApiRepo)
 
-    stationsRepo.near().subscribeOn(MainScheduler.instance).subscribe(onNext: {
+    disposable = stationsRepo
+      .near()
+      .subscribeOn(MainScheduler.instance)
+      .subscribe(onNext: {
         response in
-        print(response)
-
-        self.disposable?.dispose()
-        self.mapView.isHidden = false
-        self.stationsView.isHidden = false
-        self.loadingView.isHidden = true
-        self.stationsView.add(stations: response.1)
-        self.mapView.updateMap(location: response.0)
-        self.mapView.updateMap(station: response.1.first!)
+        self.updateUI(location: response.0, stations: response.1);
       }, onError: {
         (error) -> Void in
         //TODO: show error
@@ -44,6 +40,16 @@ class StationViewController: UIViewController, StationsViewDelegate {
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+
+  private func updateUI(location: CLLocation, stations: [PolylineStation]) {
+    self.disposable?.dispose()
+    self.mapView.isHidden = false
+    self.stationsView.isHidden = false
+    self.loadingView.isHidden = true
+    self.stationsView.add(stations: stations)
+    self.mapView.updateMap(location: location)
+    self.mapView.updateMap(station: stations.first!)
   }
 
   internal func stationSelected(station: PolylineStation) {

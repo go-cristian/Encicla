@@ -27,35 +27,35 @@ class DefaultRoute: Route {
       request.responseObject {
         (response: DataResponse<RouteServerResponse>) in
 
-        if response.result.isFailure {
-          observer.on(.error(response.result.error!))
-        } else {
-          if let response = response.result.value {
-            if response.valid() {
-              observer.on(.next(response.value()))
-            } else {
-              let path = GMSMutablePath()
-              path.add(CLLocationCoordinate2DMake(from.coordinate.latitude,
-                from.coordinate.longitude))
-              path.add(CLLocationCoordinate2DMake(to.coordinate.latitude,
-                to.coordinate.longitude))
-              let polyline = GMSPolyline(path: path)
-              observer.on(.next(polyline))
-            }
-            observer.on(.completed)
-          } else {
-            observer.on(.error(response.result.error!))
-          }
+        if let error = response.result.error {
+          observer.on(.error(error))
+          return
         }
+
+        if let response = response.result.value {
+          observer.on(.next(response.route()))
+        } else {
+          observer.on(.next(self.linearRoute(from: from, to: to)))
+        }
+        observer.on(.completed)
       }
       return Disposables.create(with: { request.cancel() })
     }
+  }
+
+  private func linearRoute(from: CLLocation, to: CLLocation) -> GMSPolyline {
+    let path = GMSMutablePath()
+    path.add(CLLocationCoordinate2DMake(from.coordinate.latitude,
+      from.coordinate.longitude))
+    path.add(CLLocationCoordinate2DMake(to.coordinate.latitude,
+      to.coordinate.longitude))
+    return GMSPolyline(path: path)
   }
 }
 
 private class RouteServerResponse: Mappable {
 
-  private var routes: [RouteResponse]?
+  var routes: [RouteResponse]?
 
   required init?(map: Map) {}
 
@@ -67,9 +67,9 @@ private class RouteServerResponse: Mappable {
     return routes != nil
   }
 
-  func value() -> GMSPolyline {
+  func route() -> GMSPolyline {
     let path = GMSMutablePath()
-    routes?.first?.legs?.first?.steps?.map {
+    _ = routes?.first?.legs?.first?.steps?.map {
       path.add(CLLocationCoordinate2DMake(($0.start_location?.lat)!,
         ($0.start_location?.lng)!))
       path.add(CLLocationCoordinate2DMake(($0.end_location?.lat)!,
@@ -81,19 +81,17 @@ private class RouteServerResponse: Mappable {
 
 private class RouteResponse: Mappable {
   var legs: [LegsResponse]?
-  var overview_polyline: OverviewPolyline?
 
   required init?(map: Map) {}
 
   internal func mapping(map: Map) {
     legs <- map["legs"]
-    overview_polyline <- map["overview_polyline"]
   }
 }
 
 private class LegsResponse: Mappable {
-  private var start_location: PositionResponse?
-  private var end_location: PositionResponse?
+  var start_location: PositionResponse?
+  var end_location: PositionResponse?
   var steps: [StepResponse]?
 
   required init?(map: Map) {}
@@ -105,27 +103,15 @@ private class LegsResponse: Mappable {
   }
 }
 
-private class OverviewPolyline: Mappable {
-  var points: String?
-
-  required init?(map: Map) {}
-
-  internal func mapping(map: Map) {
-    points <- map["points"]
-  }
-}
-
 private class StepResponse: Mappable {
   var start_location: PositionResponse?
   var end_location: PositionResponse?
-  var polyline: OverviewPolyline?
 
   required init?(map: Map) {}
 
   internal func mapping(map: Map) {
     start_location <- map["start_location"]
     end_location <- map["end_location"]
-    polyline <- map["polyline"]
   }
 }
 
