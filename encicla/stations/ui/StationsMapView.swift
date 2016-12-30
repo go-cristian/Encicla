@@ -3,11 +3,9 @@ import GoogleMaps
 class StationsMapView: GMSMapView {
 
   var location: CLLocation?
-  var marker: GMSMarker = GMSMarker(position: CLLocationCoordinate2DMake(0, 0))
 
   required init?(coder decoder: NSCoder) {
     super.init(coder: decoder)
-    marker.map = self
     if let styleURL = Bundle.main.url(forResource: "style",
       withExtension: "json") {
       mapStyle = try! GMSMapStyle(contentsOfFileURL: styleURL)
@@ -24,17 +22,16 @@ class StationsMapView: GMSMapView {
     clear()
     camera = buildCamera(location: location, station: station)
 
-    let marker = GMSMarker(position: location.coordinate)
-    marker.title = "Me"
-    marker.map = self
+    let markerLocation = GMSMarker(position: location.coordinate)
+    markerLocation.title = "Me"
+    markerLocation.map = self
 
-    self.marker.title = station.name;
-    self.marker.position = CLLocationCoordinate2DMake(station.lat, station.lon)
-    self.marker.map = self
+    let markerStation = GMSMarker(position: CLLocationCoordinate2DMake(station.lat,
+      station.lon))
+    markerStation.title = station.name;
+    markerStation.map = self
 
     station.polyline.map = self
-
-    updateFocusIfNeeded()
   }
 
   private func buildCamera(location: CLLocation,
