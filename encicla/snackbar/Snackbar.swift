@@ -7,6 +7,7 @@ class Snackbar: UIView {
   private static let BUTTON_WIDTH = CGFloat(100)
 
   private var label: UILabel?
+  private var button: UIButton?
   private var action: ((Snackbar) -> Void)?
 
   override init(frame: CGRect) {
@@ -24,13 +25,11 @@ class Snackbar: UIView {
       y: 0,
       width: frame.size.width,
       height: frame.size.height))
-    label.text = message
     label.textAlignment = .left
     label.textColor = UIColor.white
     self.label = label
 
     let button = UIButton(type: .system)
-    button.setTitle("Button", for: .normal)
     button.frame = CGRect(x: frame.width - Snackbar.BUTTON_WIDTH,
       y: 0,
       width: Snackbar.BUTTON_WIDTH,
@@ -38,6 +37,7 @@ class Snackbar: UIView {
     button.addTarget(self,
       action: #selector(pressButton(button:)),
       for: .touchUpInside)
+    self.button = button
 
     addSubview(label)
     addSubview(button)
@@ -56,7 +56,13 @@ class Snackbar: UIView {
     }
   }
 
-  static func show(view: UIView, message: String,
+  var buttonText: String = "" {
+    didSet {
+      button?.setTitle(buttonText, for: .normal)
+    }
+  }
+
+  static func show(view: UIView, message: String, buttonText: String,
     action: @escaping (Snackbar) -> Void) {
     let origin = CGPoint(x: 0, y: view.frame.size.height - HEIGHT)
     let size = CGSize(width: view.frame.width, height: HEIGHT)
@@ -64,6 +70,7 @@ class Snackbar: UIView {
     let snackbar = Snackbar(frame: frame)
     view.addSubview(snackbar)
     snackbar.message = message
+    snackbar.buttonText = buttonText
     snackbar.action = action
   }
 }

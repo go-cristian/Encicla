@@ -1,11 +1,11 @@
 import CoreLocation
 import RxSwift
 
-protocol Location {
+protocol GPS {
   func locate() -> Observable<CLLocation>
 }
 
-class DefaultLocation: NSObject, Location, CLLocationManagerDelegate {
+class DefaultGPS: NSObject, GPS, CLLocationManagerDelegate {
 
   private var observer: AnyObserver<CLLocation>?
 

@@ -10,12 +10,14 @@ class StationsView: UICollectionView, UICollectionViewDelegate, UICollectionView
     delegate = self
     dataSource = self
     collectionViewLayout = UICollectionViewFlowLayout()
+    isHidden = true
   }
 
   func add(stations: [PolylineStation]) {
     self.stations.removeAll()
     self.stations.append(contentsOf: stations)
     self.reloadData()
+    isHidden = false
   }
 
   func collectionView(_ collectionView: UICollectionView,

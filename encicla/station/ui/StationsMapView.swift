@@ -9,11 +9,13 @@ class StationsMapView: GMSMapView {
     if let styleURL = Bundle.main.url(forResource: "style",
       withExtension: "json") {
       mapStyle = try! GMSMapStyle(contentsOfFileURL: styleURL)
+      isUserInteractionEnabled = false
     }
   }
 
   func updateMap(location: CLLocation) {
     self.location = location
+    isUserInteractionEnabled = true
   }
 
   func updateMap(station: PolylineStation) {

@@ -4,35 +4,35 @@ import RxCocoa
 import CoreLocation
 import GoogleMaps
 
-class StationViewController: UIViewController, StationsViewDelegate {
+class StationViewController: BaseViewController, StationsViewDelegate {
 
   @IBOutlet var stationsView: StationsView!
   @IBOutlet var mapView: StationsMapView!
   @IBOutlet var loadingView: LoadingView!
-  var disposable: Disposable?
+  private let disposable = CompositeDisposable()
+
+  private let stationsRepo = DefaultStations(locationRepo: DefaultGPS(),
+    routesRepo: DefaultRoute(),
+    stationsApiRepo: DefaultStationsAPI())
+    .near()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     stationsView.onClickDelegate = self
-    mapView.isUserInteractionEnabled = false
-    stationsView.isHidden = true
     self.request()
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+  override func onResume() {
+    if disposable.count > 0 { loadingView.start() }
+  }
+
+  override func onPause() {
+    loadingView.stop()
   }
 
   private func request() {
-    //TODO: find a way to use a dependency injection container
-    let locationRepo = DefaultLocation()
-    let routesRepo = DefaultRoute()
-    let stationsApiRepo = DefaultStationsAPI()
-    let stationsRepo = DefaultStations(locationRepo: locationRepo,
-      routesRepo: routesRepo,
-      stationsApiRepo: stationsApiRepo)
-    disposable = stationsRepo
-      .near()
+    loadingView.start()
+    let subscription = stationsRepo
       .subscribeOn(MainScheduler.instance)
       .subscribe(onNext: {
         response in
@@ -45,21 +45,20 @@ class StationViewController: UIViewController, StationsViewDelegate {
           self.showError()
         }
       })
+    disposable.insert(subscription)
   }
 
   private func updateUI(location: CLLocation, stations: [PolylineStation]) {
-    disposable?.dispose()
-    mapView.isUserInteractionEnabled = true
-    stationsView.isHidden = false
-    loadingView.isHidden = true
     stationsView.add(stations: stations)
     mapView.updateMap(location: location)
     mapView.updateMap(station: stations.first!)
   }
 
   private func showError() {
-    loadingView.isHidden = true
-    Snackbar.show(view: self.view, message: "There is an error") {
+    loadingView.stop()
+    Snackbar.show(view: self.view,
+      message: "There is an error getting the results",
+      buttonText: "Retry") {
       snackbar in
       self.request()
       snackbar.removeFromSuperview()
@@ -67,7 +66,10 @@ class StationViewController: UIViewController, StationsViewDelegate {
   }
 
   private func settings() {
-    Snackbar.show(view: self.view, message: "Please approve permission") {
+    loadingView.stop()
+    Snackbar.show(view: self.view,
+      message: "Please approve Location permission",
+      buttonText: "Retry") {
       snackbar in
       let url = URL(string: UIApplicationOpenSettingsURLString)
       UIApplication.shared.openURL(url!)
@@ -79,4 +81,3 @@ class StationViewController: UIViewController, StationsViewDelegate {
     mapView.updateMap(station: station)
   }
 }
-

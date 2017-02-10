@@ -9,32 +9,31 @@ protocol Stations {
 class DefaultStations: Stations {
 
   private static let LIMIT = 3
-  let locationRepo: Location
-  let routesRepo: Route
-  let stationsApiRepo: StationsAPI
+  let gps: GPS
+  let routesApi: RouteApi
+  let stationsApi: StationsAPI
 
-  init(locationRepo: Location, routesRepo: Route,
-    stationsApiRepo: StationsAPI) {
-    self.locationRepo = locationRepo
-    self.routesRepo = routesRepo
-    self.stationsApiRepo = stationsApiRepo
+  init(locationRepo: GPS, routesRepo: RouteApi, stationsApiRepo: StationsAPI) {
+    self.gps = locationRepo
+    self.routesApi = routesRepo
+    self.stationsApi = stationsApiRepo
   }
 
   internal func near() -> Observable<(CLLocation, [PolylineStation])> {
-    return self.locationRepo
+    return self.gps
       .locate()
       .flatMap {
         location in
-        self.stationsApiRepo
+        self.stationsApi
           .stations()
-          .flatMap({
+          .flatMap {
             stations in
-            self.sorted(location: location, stations: stations)
-          })
-          .take(DefaultStations.LIMIT)
+            self.sort(location: location, stations: stations)
+          }
+          .take(3)
           .flatMap {
             station in
-            self.routeFor(location: location, station: station)
+            self.route(location: location, station: station)
           }
           .toArray()
           .flatMap {
@@ -44,11 +43,11 @@ class DefaultStations: Stations {
       }
   }
 
-  private func routeFor(location: CLLocation,
+  private func route(location: CLLocation,
     station: Station) -> Observable<PolylineStation> {
-    return self.routesRepo
-      .calculate(from: location,
-        to: CLLocation(latitude: station.lat, longitude: station.lon))
+    let locationTo = CLLocation(latitude: station.lat, longitude: station.lon)
+    return self.routesApi
+      .calculate(from: location, to: locationTo)
       .flatMap({
         route in
         return Observable.just(PolylineStation(name: station.name,
@@ -59,11 +58,11 @@ class DefaultStations: Stations {
       })
   }
 
-  private func sorted(location: CLLocation,
+  private func sort(location: CLLocation,
     stations: [Station]) -> Observable<Station> {
-    return Observable.from(Array(stations.sorted {
+    return Observable.from(stations.sorted {
       $0.distance(location: location) < $1.distance(location: location)
-    }))
+    })
   }
 }
 

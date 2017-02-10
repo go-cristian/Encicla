@@ -20,8 +20,9 @@
 		242BE26A1E10C509003EF255 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242BE2581E10C509003EF255 /* StationViewController.swift */; };
 		594C174B267DA257B679BF24 /* Pods_encicla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF1B085E352F73806F97C41 /* Pods_encicla.framework */; };
 		FC1165FFBB4DE174676DFB89 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1169CB96059AB701234C1E /* LoadingView.swift */; };
+		FC116625A82C37334B3C5E0B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1168F3A5CE27EA0EA26E60 /* BaseViewController.swift */; };
 		FC11664566DFFCDACA7FC53D /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = FC1161E78DFE7C3F39204FCF /* style.json */; };
-		FC1169447E1C19AB0B97DFF5 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116B5590188E340E9283C4 /* Route.swift */; };
+		FC1169447E1C19AB0B97DFF5 /* RouteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC116B5590188E340E9283C4 /* RouteApi.swift */; };
 		FC116EE60DC345B3C7CFE405 /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1164E6753CF779248219A4 /* Snackbar.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +51,9 @@
 		CFB1192F7EC90DAF11124870 /* Pods-enciclaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-enciclaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-enciclaTests/Pods-enciclaTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC1161E78DFE7C3F39204FCF /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		FC1164E6753CF779248219A4 /* Snackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snackbar.swift; sourceTree = "<group>"; };
+		FC1168F3A5CE27EA0EA26E60 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FC1169CB96059AB701234C1E /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		FC116B5590188E340E9283C4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		FC116B5590188E340E9283C4 /* RouteApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +100,10 @@
 				242BE24B1E10C508003EF255 /* Main.storyboard */,
 				242BE24D1E10C508003EF255 /* location */,
 				242BE24F1E10C508003EF255 /* Info.plist */,
-				242BE2501E10C508003EF255 /* stations */,
+				242BE2501E10C508003EF255 /* station */,
 				FC116AD13BEF669711D01874 /* route */,
 				FC11622C3486BB8E4B1F1A8D /* snackbar */,
+				FC1168F3A5CE27EA0EA26E60 /* BaseViewController.swift */,
 			);
 			path = encicla;
 			sourceTree = "<group>";
@@ -113,13 +116,13 @@
 			path = location;
 			sourceTree = "<group>";
 		};
-		242BE2501E10C508003EF255 /* stations */ = {
+		242BE2501E10C508003EF255 /* station */ = {
 			isa = PBXGroup;
 			children = (
 				242BE2511E10C508003EF255 /* component */,
 				242BE2541E10C508003EF255 /* ui */,
 			);
-			path = stations;
+			path = station;
 			sourceTree = "<group>";
 		};
 		242BE2511E10C508003EF255 /* component */ = {
@@ -173,7 +176,7 @@
 		FC116AD13BEF669711D01874 /* route */ = {
 			isa = PBXGroup;
 			children = (
-				FC116B5590188E340E9283C4 /* Route.swift */,
+				FC116B5590188E340E9283C4 /* RouteApi.swift */,
 			);
 			path = route;
 			sourceTree = "<group>";
@@ -312,8 +315,9 @@
 				242BE2681E10C509003EF255 /* StationsView.swift in Sources */,
 				242BE26A1E10C509003EF255 /* StationViewController.swift in Sources */,
 				FC1165FFBB4DE174676DFB89 /* LoadingView.swift in Sources */,
-				FC1169447E1C19AB0B97DFF5 /* Route.swift in Sources */,
+				FC1169447E1C19AB0B97DFF5 /* RouteApi.swift in Sources */,
 				FC116EE60DC345B3C7CFE405 /* Snackbar.swift in Sources */,
+				FC116625A82C37334B3C5E0B /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

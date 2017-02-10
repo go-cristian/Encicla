@@ -5,11 +5,11 @@ import ObjectMapper
 import AlamofireObjectMapper
 import GoogleMaps
 
-protocol Route {
+protocol RouteApi {
   func calculate(from: CLLocation, to: CLLocation) -> Observable<GMSPolyline>
 }
 
-class DefaultRoute: Route {
+class DefaultRoute: RouteApi {
 
   internal func calculate(from: CLLocation,
     to: CLLocation) -> Observable<GMSPolyline> {
